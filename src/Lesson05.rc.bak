@@ -1,0 +1,132 @@
+/*
+*
+*******************************************
+*                                         *
+*   Resource File                         *
+*   Created by Thierry DECHAIZE           *
+*   Date : 2013/11/29 					  *
+*******************************************
+*
+*/
+
+/**          Comments manageable by Doxygen
+*
+* \file            Lesson05.rc
+* \author          Created by Thierry Dechaize to verify paradigm : one source for multiple C Compilers
+* \version         2.0.1.0
+* \date            28 octobre 2020
+* \brief           Les déclarations de ressources (icônes et informations de version)
+* \details         Rien à dire, il faut lire.
+*
+*
+*/
+
+#if defined(_WIN32) || defined(_WIN64)
+
+#include <windows.h>
+#ifdef __LCC__
+#include <winver.h>
+#endif
+#include "resource.h"
+
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
+#pragma code_page(1252)
+
+////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\opengl.ico"
+IDI_MYICON 				ICON 					"res\\opengl.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+// #define VER_FILEVERSION             2,0,1,0
+// #define VER_FILEVERSION_STR         "2.0.1.0\0"
+
+// #define VER_PRODUCTVERSION          2,0,1,0
+// #define VER_PRODUCTVERSION_STR      "2.0.1.0\0"
+// #define VER_DATE_BUILD              __DATE__
+
+#if defined(_MSC_VER)
+#define VER_PRODUCTNAME_STR "OpenGL Lesson 01 - Visual Studio\0"
+#elif defined(__MINGW64__)
+#define VER_PRODUCTNAME_STR "OpenGL Lesson 01 - MINGW64\0"
+#elif defined(__MINGW32__)
+#define VER_PRODUCTNAME_STR "OpenGL Lesson 01 - MINGW32\0"
+#elif defined(__GNUC__)
+#define VER_PRODUCTNAME_STR "OpenGL Lesson 01 - GNU C\0"
+#elif defined(__BORLANDC__)
+#define VER_PRODUCTNAME_STR "OpenGL Lesson 01 - Borland C\0"
+#elif defined(__TURBOC__)
+#define VER_PRODUCTNAME_STR "OpenGL Lesson 01 - Borland C\0"
+#elif defined(__WATCOMC__)
+#define VER_PRODUCTNAME_STR "OpenGL Lesson 01 - Watcom\0"
+#elif defined(__LCC__)
+#define VER_PRODUCTNAME_STR "OpenGL Lesson 01 - LCC\0"
+#elif defined(__CYGWIN__)
+#define VER_PRODUCTNAME_STR "OpenGL Lesson 01 - CYGWIN\0"
+#elif defined(__DMC__)
+#define VER_PRODUCTNAME_STR "OpenGL Lesson 01 - Digital Mars Compiler\0"
+#elif defined(__POCC__)
+#define VER_PRODUCTNAME_STR "OpenGL Lesson 01 - PELLES C Compiler\0"
+#else
+#define VER_PRODUCTNAME_STR "OpenGL Lesson 01 - Unknown Compiler\0"
+#endif
+
+// #define VER_SUPPORT     "thierry.dechaize@sfr.fr\0"
+// #define VER_USERS       "all\0"
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION    	VER_FILEVERSION
+ PRODUCTVERSION 	VER_PRODUCTVERSION
+ FILEFLAGSMASK  	0x3fL // VS_FFI_FILEFLAGSMASK
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS         	VOS__WINDOWS32
+ FILETYPE       	VFT_APP
+ FILESUBTYPE    	VFT2_UNKNOWN
+ BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904E4"
+        BEGIN
+            VALUE "Build",            VER_DATE_BUILD
+            VALUE "Comments",         VER_COMMENTS
+            VALUE "CompanyName",      VER_COMPANYNAME_STR
+            VALUE "FileDescription",  VER_FILEDESCRIPTION_STR
+            VALUE "FileVersion",      VER_FILEVERSION_STR
+            VALUE "InternalName",     VER_INTERNALNAME_STR
+            VALUE "LegalCopyright",   VER_LEGALCOPYRIGHT_STR
+            VALUE "LegalTrademarks1", VER_LEGALTRADEMARKS1_STR
+            VALUE "LegalTrademarks2", VER_LEGALTRADEMARKS2_STR
+            VALUE "OriginalFilename", VER_ORIGINALFILENAME_STR
+            VALUE "ProductName",      VER_PRODUCTNAME_STR
+            VALUE "ProductVersion",   VER_PRODUCTVERSION_STR
+            VALUE "Support",          VER_SUPPORT
+            VALUE "Users",            VER_USERS
+        END
+    END
+
+    BLOCK "VarFileInfo"
+    BEGIN
+        /* The following line should only be modified for localized versions.     */
+        /* It consists of any number of WORD,WORD pairs, with each pair           */
+        /* describing a language,codepage combination supported by the file.      */
+        /*                                                                        */
+        /* For example, a file might have values "0x409,1252" indicating that it  */
+        /* supports English language (0x409) in the Windows ANSI codepage (1252). */
+        VALUE "Translation", 0x40c, 1252    // French Language Translation
+    END
+ END
+
+#endif //_WIN32 ou _WIN64

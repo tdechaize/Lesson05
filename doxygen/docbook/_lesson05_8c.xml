@@ -1,0 +1,556 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__lesson05_8c" xml:lang="en-US">
+<title>Lesson05.c File Reference</title>
+<indexterm><primary>Lesson05.c</primary></indexterm>
+<para>
+
+<para>Ouvre une simple fenêtre Windows et dessine deux volumes avec OpenGL : une pyramide et un dé colorés. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;windows.h&gt;<?linebreak?>#include &lt;gl\gl.h&gt;<?linebreak?>#include &lt;gl\glu.h&gt;<?linebreak?></programlisting>Include dependency graph for Lesson05.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_lesson05_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>LRESULT CALLBACK <link linkend="__lesson05_8c_1ae749e989b362e19783c7af4a2bf46c95">WndProc</link> (HWND <link linkend="__lesson05_8c_1afec4341c234519e145bac6f0e5edaa51">hWnd</link>, UINT uMsg, WPARAM wParam, LPARAM lParam)</para>
+
+<para>Fonction CALLBACK de traitement des messages Windows. </para>
+</listitem>
+            <listitem><para>GLvoid <link linkend="__lesson05_8c_1a87bb84d489df61ed7b0c002584fd984f">ReSizeGLScene</link> (GLsizei width, GLsizei height)</para>
+
+<para>Fonction ReSizeGLScene : redimensionnement de la fenêtre Windows gérant OpenGL. </para>
+</listitem>
+            <listitem><para>int <link linkend="__lesson05_8c_1aa4c387d3f1ebce6d57684b6a10c9b0ae">InitGL</link> (GLvoid)</para>
+
+<para>Fonction InitGL : Fin de l&apos;initialisation de la fenêtre Windows gérant OpenGL. </para>
+</listitem>
+            <listitem><para>int <link linkend="__lesson05_8c_1a52061247bdaeb770e3a1d59eefaad972">DrawGLScene</link> (GLvoid)</para>
+
+<para>Fonction DrawGLScene : Dessin sous OpenGL dans la fenêtre Windows. </para>
+</listitem>
+            <listitem><para>GLvoid <link linkend="__lesson05_8c_1af33a2273205c1491be5916d3091658e0">KillGLWindow</link> (GLvoid)</para>
+
+<para>Fonction KillGLWindow : Destruction de toutes les ressources du programme. </para>
+</listitem>
+            <listitem><para>BOOL <link linkend="__lesson05_8c_1ae5f043c9df9b9e5e0e26d567feeeb1bc">CreateGLWindow</link> (char *title, int width, int height, int bits, BOOL fullscreenflag)</para>
+
+<para>Creation of our OpenGL Window. </para>
+</listitem>
+            <listitem><para>int WINAPI <link linkend="__lesson05_8c_1a661c2abc03926acfaeb93b4ae7db4943">WinMain</link> (HINSTANCE <link linkend="__lesson05_8c_1a74029128723095e7bf00a71d46af8b24">hInstance</link>, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)</para>
+
+<para>Creation of our application on Windows System (not console application) *. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>HDC <link linkend="__lesson05_8c_1a78f6446a0e13adc7b7b2f239112ac785">hDC</link> =NULL</para>
+</listitem>
+            <listitem><para>HGLRC <link linkend="__lesson05_8c_1a874963259c7cd998acfe6e187fbdb4c1">hRC</link> =NULL</para>
+</listitem>
+            <listitem><para>HWND <link linkend="__lesson05_8c_1afec4341c234519e145bac6f0e5edaa51">hWnd</link> =NULL</para>
+</listitem>
+            <listitem><para>HINSTANCE <link linkend="__lesson05_8c_1a74029128723095e7bf00a71d46af8b24">hInstance</link></para>
+</listitem>
+            <listitem><para>BOOL <link linkend="__lesson05_8c_1a55a8351b704275ad12988864918abb2a">keys</link> [256]</para>
+</listitem>
+            <listitem><para>BOOL <link linkend="__lesson05_8c_1a22389371583c4b8843e06da43399d6d9">active</link> =TRUE</para>
+</listitem>
+            <listitem><para>BOOL <link linkend="__lesson05_8c_1ab15a33c0173f2c5b6ac806c55cf7f0ba">fullscreen</link> =TRUE</para>
+</listitem>
+            <listitem><para>GLfloat <link linkend="__lesson05_8c_1aa5b3b1216574c3613c80028f909c21d7">rtri</link></para>
+</listitem>
+            <listitem><para>GLfloat <link linkend="__lesson05_8c_1a151d23a11bc1e21caadb6282149ce4e0">rquad</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Ouvre une simple fenêtre Windows et dessine deux volumes avec OpenGL : une pyramide et un dé colorés. </para>
+
+<para>Comments manageable by Doxygen</para>
+
+<para>Modified smoothly by Thierry DECHAIZE</para>
+
+<para>Paradigm : obtain one source (only one !) compatible for multiple free C Compilers and provide for all users an development environment on Windows (64 bits compatible), the great Code::Blocks manager (version 20.03), and don&apos;t use glaux.lib or glaux.dll.</para>
+
+<para>a) Mingw 32 bits, version officielle gcc 9.2.0 (very old !) : downloadable on <link xlink:href="http://sourceforge.net/projects/mingw/">http://sourceforge.net/projects/mingw/</link> (official) b) Mingw 64 bits included in new IDE Red Panda Dev-Cpp, version gcc 12.2.0 : donwloadable on <link xlink:href="https://sourceforge.net/projects/redpanda-cpp/files/">https://sourceforge.net/projects/redpanda-cpp/files/</link> c) Mingw 64 bits included in package Code::Blocks (version 20.03 with mingw), version gcc 11.2.0 : downloadable on <link xlink:href="http://sourceforge.net/projects/codeblocks/files/Binaries/20.03/Windows/">http://sourceforge.net/projects/codeblocks/files/Binaries/20.03/Windows/</link> d) Mingw 32 and 64 bits packagés, version gcc 11.2.0 : downloadable on <link xlink:href="https://winlibs.com/">https://winlibs.com/</link> (and CLANG included in, 32 and 64 bits), two kits :<itemizedlist>
+<listitem>
+<para>winlibs-i686-posix-dwarf-gcc-12.2.0-llvm-15.0.7-mingw-w64ucrt-10.0.0-r4.7z (32 bits)</para>
+</listitem><listitem>
+<para>winlibs-x86_64-posix-seh-gcc-12.2.0-llvm-15.0.7-mingw-w64ucrt-10.0.0-r4.7z (64 bits) e) Cygwin64, 32 et 64 bits, version gcc 11.3.0 : downloadable on <link xlink:href="http://www.cygwin.com/install.html">http://www.cygwin.com/install.html</link> (tool for install : setup-x86_64.exe) f) TDM GCC, 32 et 64 bits, version 10.3.0 : downloadable on <link xlink:href="http://sourceforge.net/projects/TDM-GCC">http://sourceforge.net/projects/TDM-GCC</link> g) MSYS2 environnement MINGW32 and MINGW64, 32 et 64 bits, version de 2022 (msys2-x86_64-20230127.exe), version gcc 12.2.0 : downloadable on <link xlink:href="https://repo.msys2.org/distrib/x86_64/msys2-x86_64-20230127.exe">https://repo.msys2.org/distrib/x86_64/msys2-x86_64-20230127.exe</link> h) Visual Studio 2022, 32 et 64 bits, community edition for free : downloadable on <link xlink:href="https://visualstudio.microsoft.com/fr/thank-you-downloading-visual-studio/?sku=Community&amp;rel=17">https://visualstudio.microsoft.com/fr/thank-you-downloading-visual-studio/?sku=Community&amp;rel=17</link> i) Borland C/C++ 32 bits, version 5.5 : downloadable on <link xlink:href="https://developerinsider.co/download-and-install-borland-c-compiler-on-windows-10/">https://developerinsider.co/download-and-install-borland-c-compiler-on-windows-10/</link> j) Digital Mars Compiler C 32 bits version 8.57 : downloadable on <link xlink:href="http://www.digitalmars.com">http://www.digitalmars.com</link> (the more old compiler, the more bugged, dead branch !) k) OpenWatcom 32 et 64 bits, version 2.0 : downloadable on <link xlink:href="http://openwatcom.mirror.fr/">http://openwatcom.mirror.fr/</link> l) Lcc and Lcc64, 32 et 64 bits: downloadable <link xlink:href="http://www.cs.virginia.edu/~lcc-win32/">http://www.cs.virginia.edu/~lcc-win32/</link> m) PELLES C, 32 et 64 bits, version 11.0 : downloadable on <link xlink:href="http://www.smorgasbordet.com/pellesc/">http://www.smorgasbordet.com/pellesc/</link> o) CLANG, adossé aux environnements MINGW64 et MINGW32, version 15.0.7 (version gcc 12.0.0) : downloadable on <link xlink:href="https://winlibs.com/">https://winlibs.com/</link> p) CLANG, adossé aux environnements Visual Studio 2022 (+ kits Microsoft), version 15.0.7 : downloadable on <link xlink:href="https://releases.llvm.org/download.html">https://releases.llvm.org/download.html</link> q) CLANG de la version MSYS2, adossé aux environnements MINGW64 et MINGW32, version 15.0.7 (version gcc 12.2.0) : downloadable on <link xlink:href="https://repo.msys2.org/distrib/x86_64/msys2-x86_64-20220118.exe">https://repo.msys2.org/distrib/x86_64/msys2-x86_64-20220118.exe</link> r) CLANG de la version CYGWIN, adossé aux environnements MINGW64 et MINGW32, version 8.0.0 (version gcc 11.3.0) : downloadable <link xlink:href="http://www.cygwin.com/install.html">http://www.cygwin.com/install.html</link> (tool for install : setup-x86_64.exe)</para>
+</listitem></itemizedlist>
+</para>
+
+<para>TDE -&gt; Add resource file end resource header for restitute version + icon OpenGL.ico for fun because versionning is important, same for freeware :-) !</para>
+
+<para>Date : 2023/02/06</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Jeff Molofee ( NeHe ) originely, adapted by Thierry Dechaize </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>2.0.1.0 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>6 février 2023</para>
+</formalpara>
+Ce programme ne gère que deux événements : le clic sur le bouton &quot;Fermé&quot; de la fenêtre ou la sortie par la touche ESC. </para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__lesson05_8c_1ae5f043c9df9b9e5e0e26d567feeeb1bc"/><section>
+    <title>CreateGLWindow()</title>
+<indexterm><primary>CreateGLWindow</primary><secondary>Lesson05.c</secondary></indexterm>
+<indexterm><primary>Lesson05.c</primary><secondary>CreateGLWindow</secondary></indexterm>
+<para><computeroutput>BOOL CreateGLWindow (char * title, int width, int height, int bits, BOOL fullscreenflag)</computeroutput></para><para>
+
+<para>Creation of our OpenGL Window. </para>
+</para>
+
+<para>This Code Creates Our OpenGL Window. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>title</entry><entry>
+<para>- Title To Appear At The Top Of The Window * </para>
+</entry>
+                            </row>
+                            <row>
+<entry>width</entry><entry>
+<para>- Width Of The GL Window Or Fullscreen Mode * </para>
+</entry>
+                            </row>
+                            <row>
+<entry>height</entry><entry>
+<para>- Height Of The GL Window Or Fullscreen Mode * </para>
+</entry>
+                            </row>
+                            <row>
+<entry>bits</entry><entry>
+<para>- Number Of Bits To Use For Color (8/16/24/32) * </para>
+</entry>
+                            </row>
+                            <row>
+<entry>fullscreenflag</entry><entry>
+<para>- Use Fullscreen Mode (TRUE) Or Windowed Mode (FALSE) * </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>BOOL - un entier booleen (OK ou non). * </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_lesson05_8c_ae5f043c9df9b9e5e0e26d567feeeb1bc_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_lesson05_8c_ae5f043c9df9b9e5e0e26d567feeeb1bc_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__lesson05_8c_1a52061247bdaeb770e3a1d59eefaad972"/><section>
+    <title>DrawGLScene()</title>
+<indexterm><primary>DrawGLScene</primary><secondary>Lesson05.c</secondary></indexterm>
+<indexterm><primary>Lesson05.c</primary><secondary>DrawGLScene</secondary></indexterm>
+<para><computeroutput>int DrawGLScene (GLvoid )</computeroutput></para><para>
+
+<para>Fonction DrawGLScene : Dessin sous OpenGL dans la fenêtre Windows. </para>
+</para>
+
+<para>This Code draw the scene OpenGL in the main window.</para>
+
+<para>Rien de spécial 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>GLvoid</entry><entry>
+<para>un void OpenGL. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>int un entier (booleen) </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_lesson05_8c_a52061247bdaeb770e3a1d59eefaad972_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__lesson05_8c_1aa4c387d3f1ebce6d57684b6a10c9b0ae"/><section>
+    <title>InitGL()</title>
+<indexterm><primary>InitGL</primary><secondary>Lesson05.c</secondary></indexterm>
+<indexterm><primary>Lesson05.c</primary><secondary>InitGL</secondary></indexterm>
+<para><computeroutput>int InitGL (GLvoid )</computeroutput></para><para>
+
+<para>Fonction InitGL : Fin de l&apos;initialisation de la fenêtre Windows gérant OpenGL. </para>
+</para>
+
+<para>This Code finish the initialization OpenGL of the main window.</para>
+
+<para>Rien de spécial 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>GLvoid</entry><entry>
+<para>un void OpenGL. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>int un entier (booleen) </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_lesson05_8c_aa4c387d3f1ebce6d57684b6a10c9b0ae_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__lesson05_8c_1af33a2273205c1491be5916d3091658e0"/><section>
+    <title>KillGLWindow()</title>
+<indexterm><primary>KillGLWindow</primary><secondary>Lesson05.c</secondary></indexterm>
+<indexterm><primary>Lesson05.c</primary><secondary>KillGLWindow</secondary></indexterm>
+<para><computeroutput>GLvoid KillGLWindow (GLvoid )</computeroutput></para><para>
+
+<para>Fonction KillGLWindow : Destruction de toutes les ressources du programme. </para>
+</para>
+
+<para>This Code destroy all resources of this program.</para>
+
+<para>Rien de spécial 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>GLvoid</entry><entry>
+<para>un void OpenGL. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>GLvoid un void OpenGL. </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_lesson05_8c_af33a2273205c1491be5916d3091658e0_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__lesson05_8c_1a87bb84d489df61ed7b0c002584fd984f"/><section>
+    <title>ReSizeGLScene()</title>
+<indexterm><primary>ReSizeGLScene</primary><secondary>Lesson05.c</secondary></indexterm>
+<indexterm><primary>Lesson05.c</primary><secondary>ReSizeGLScene</secondary></indexterm>
+<para><computeroutput>GLvoid ReSizeGLScene (GLsizei width, GLsizei height)</computeroutput></para><para>
+
+<para>Fonction ReSizeGLScene : redimensionnement de la fenêtre Windows gérant OpenGL. </para>
+</para>
+
+<para>This Code Resize the main window.</para>
+
+<para>En entrée les deux nouvelles dimensions de la fenêtre 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>width</entry><entry>
+<para>Width of the GL Window Or Fullscreen Mode * </para>
+</entry>
+                            </row>
+                            <row>
+<entry>height</entry><entry>
+<para>Height of the GL Window Or Fullscreen Mode * </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>GLvoid un void OpenGL. </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_lesson05_8c_a87bb84d489df61ed7b0c002584fd984f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__lesson05_8c_1a661c2abc03926acfaeb93b4ae7db4943"/><section>
+    <title>WinMain()</title>
+<indexterm><primary>WinMain</primary><secondary>Lesson05.c</secondary></indexterm>
+<indexterm><primary>Lesson05.c</primary><secondary>WinMain</secondary></indexterm>
+<para><computeroutput>int WINAPI WinMain (HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)</computeroutput></para><para>
+
+<para>Creation of our application on Windows System (not console application) *. </para>
+</para>
+
+<para>This Code is mandatory to create windows application (function WinMain) * 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>hInstance</entry><entry>
+<para>- Header de l&apos;instance Windows * </para>
+</entry>
+                            </row>
+                            <row>
+<entry>hPrevInstance</entry><entry>
+<para>- Header de l&apos;instance précédente de Windows * </para>
+</entry>
+                            </row>
+                            <row>
+<entry>lpCmdLine</entry><entry>
+<para>- Un pointeur sur la ligne de commande * </para>
+</entry>
+                            </row>
+                            <row>
+<entry>nCmdShow</entry><entry>
+<para>- Un indicateur d&apos;état * </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>int - un entier booleen (OK ou non). *<itemizedlist>
+<listitem></listitem></itemizedlist>
+</para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_lesson05_8c_a661c2abc03926acfaeb93b4ae7db4943_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="__lesson05_8c_1ae749e989b362e19783c7af4a2bf46c95"/><section>
+    <title>WndProc()</title>
+<indexterm><primary>WndProc</primary><secondary>Lesson05.c</secondary></indexterm>
+<indexterm><primary>Lesson05.c</primary><secondary>WndProc</secondary></indexterm>
+<para><computeroutput>LRESULT CALLBACK WndProc (HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)</computeroutput></para><para>
+
+<para>Fonction CALLBACK de traitement des messages Windows. </para>
+</para>
+
+<para>Comments manageable by Doxygen</para>
+
+<para>Traitement de la boucle infinie des messages Windows 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>hWnd</entry><entry>
+<para>L&apos;header de la fenêtre principale. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>uMsg</entry><entry>
+<para>Un entier non signé. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>wParam</entry><entry>
+<para>Les paramétres en entrée. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>lParam</entry><entry>
+<para>Autres paramétres en entrée. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>LRESULT Un LRESULT donnant le status du traitement du message. </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_lesson05_8c_ae749e989b362e19783c7af4a2bf46c95_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_lesson05_8c_ae749e989b362e19783c7af4a2bf46c95_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="__lesson05_8c_1a22389371583c4b8843e06da43399d6d9"/><section>
+    <title>active</title>
+<indexterm><primary>active</primary><secondary>Lesson05.c</secondary></indexterm>
+<indexterm><primary>Lesson05.c</primary><secondary>active</secondary></indexterm>
+<para><computeroutput>BOOL active =TRUE</computeroutput></para></section>
+<anchor xml:id="__lesson05_8c_1ab15a33c0173f2c5b6ac806c55cf7f0ba"/><section>
+    <title>fullscreen</title>
+<indexterm><primary>fullscreen</primary><secondary>Lesson05.c</secondary></indexterm>
+<indexterm><primary>Lesson05.c</primary><secondary>fullscreen</secondary></indexterm>
+<para><computeroutput>BOOL fullscreen =TRUE</computeroutput></para></section>
+<anchor xml:id="__lesson05_8c_1a78f6446a0e13adc7b7b2f239112ac785"/><section>
+    <title>hDC</title>
+<indexterm><primary>hDC</primary><secondary>Lesson05.c</secondary></indexterm>
+<indexterm><primary>Lesson05.c</primary><secondary>hDC</secondary></indexterm>
+<para><computeroutput>HDC hDC =NULL</computeroutput></para></section>
+<anchor xml:id="__lesson05_8c_1a74029128723095e7bf00a71d46af8b24"/><section>
+    <title>hInstance</title>
+<indexterm><primary>hInstance</primary><secondary>Lesson05.c</secondary></indexterm>
+<indexterm><primary>Lesson05.c</primary><secondary>hInstance</secondary></indexterm>
+<para><computeroutput>HINSTANCE hInstance</computeroutput></para></section>
+<anchor xml:id="__lesson05_8c_1a874963259c7cd998acfe6e187fbdb4c1"/><section>
+    <title>hRC</title>
+<indexterm><primary>hRC</primary><secondary>Lesson05.c</secondary></indexterm>
+<indexterm><primary>Lesson05.c</primary><secondary>hRC</secondary></indexterm>
+<para><computeroutput>HGLRC hRC =NULL</computeroutput></para></section>
+<anchor xml:id="__lesson05_8c_1afec4341c234519e145bac6f0e5edaa51"/><section>
+    <title>hWnd</title>
+<indexterm><primary>hWnd</primary><secondary>Lesson05.c</secondary></indexterm>
+<indexterm><primary>Lesson05.c</primary><secondary>hWnd</secondary></indexterm>
+<para><computeroutput>HWND hWnd =NULL</computeroutput></para></section>
+<anchor xml:id="__lesson05_8c_1a55a8351b704275ad12988864918abb2a"/><section>
+    <title>keys</title>
+<indexterm><primary>keys</primary><secondary>Lesson05.c</secondary></indexterm>
+<indexterm><primary>Lesson05.c</primary><secondary>keys</secondary></indexterm>
+<para><computeroutput>BOOL keys[256]</computeroutput></para></section>
+<anchor xml:id="__lesson05_8c_1a151d23a11bc1e21caadb6282149ce4e0"/><section>
+    <title>rquad</title>
+<indexterm><primary>rquad</primary><secondary>Lesson05.c</secondary></indexterm>
+<indexterm><primary>Lesson05.c</primary><secondary>rquad</secondary></indexterm>
+<para><computeroutput>GLfloat rquad</computeroutput></para></section>
+<anchor xml:id="__lesson05_8c_1aa5b3b1216574c3613c80028f909c21d7"/><section>
+    <title>rtri</title>
+<indexterm><primary>rtri</primary><secondary>Lesson05.c</secondary></indexterm>
+<indexterm><primary>Lesson05.c</primary><secondary>rtri</secondary></indexterm>
+<para><computeroutput>GLfloat rtri</computeroutput></para></section>
+</section>
+</section>

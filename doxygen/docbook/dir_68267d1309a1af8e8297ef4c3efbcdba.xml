@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_68267d1309a1af8e8297ef4c3efbcdba" xml:lang="en-US">
+<title>src Directory Reference</title>
+<indexterm><primary>src Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__lesson05_8c">Lesson05.c</link></para>
+
+<para>Ouvre une simple fenêtre Windows et dessine deux volumes avec OpenGL : une pyramide et un dé colorés. </para>
+</listitem>
+            <listitem><para>file <link linkend="_resource_8h">resource.h</link></para>
+
+<para>Les définitions utilisées par le programme et les ressources. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

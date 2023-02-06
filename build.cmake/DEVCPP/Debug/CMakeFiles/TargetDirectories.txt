@@ -1,0 +1,3 @@
+C:/src/OpenGL/NeHe_Lesson05-master/build.cmake/DEVCPP/Debug/CMakeFiles/Lesson05.dir
+C:/src/OpenGL/NeHe_Lesson05-master/build.cmake/DEVCPP/Debug/CMakeFiles/edit_cache.dir
+C:/src/OpenGL/NeHe_Lesson05-master/build.cmake/DEVCPP/Debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,18 @@
+digraph "CreateGLWindow"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [label="CreateGLWindow",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Creation of our OpenGL Window."];
+  Node1 -> Node2 [color="steelblue1",style="solid"];
+  Node2 [label="InitGL",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_lesson05_8c.html#aa4c387d3f1ebce6d57684b6a10c9b0ae",tooltip="Fonction InitGL : Fin de l'initialisation de la fenêtre Windows gérant OpenGL."];
+  Node1 -> Node3 [color="steelblue1",style="solid"];
+  Node3 [label="KillGLWindow",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_lesson05_8c.html#af33a2273205c1491be5916d3091658e0",tooltip="Fonction KillGLWindow : Destruction de toutes les ressources du programme."];
+  Node1 -> Node4 [color="steelblue1",style="solid"];
+  Node4 [label="ReSizeGLScene",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_lesson05_8c.html#a87bb84d489df61ed7b0c002584fd984f",tooltip="Fonction ReSizeGLScene : redimensionnement de la fenêtre Windows gérant OpenGL."];
+  Node1 -> Node5 [color="steelblue1",style="solid"];
+  Node5 [label="WndProc",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_lesson05_8c.html#ae749e989b362e19783c7af4a2bf46c95",tooltip="Fonction CALLBACK de traitement des messages Windows."];
+  Node5 -> Node4 [color="steelblue1",style="solid"];
+}

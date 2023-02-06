@@ -1,0 +1,319 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_resource_8h" xml:lang="en-US">
+<title>resource.h File Reference</title>
+<indexterm><primary>resource.h</primary></indexterm>
+<para>
+
+<para>Les définitions utilisées par le programme et les ressources. </para>
+ 
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_resource_8h_1af0f17366b0d5062edb98fa2c199fc542">HEADER_RESOURCE__INCLUDED</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1abb326bd165140b31acf04b893ef655ca">IDC_MYICON</link>&#160;&#160;&#160;2</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1aa9b6008c47cd133dfc8910da61d25547">IDD_TEXTDIALOGSAMPLE_DIALOG</link>&#160;&#160;&#160;102</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1a636c9aea2a8d16b73e43df39b3e0e7bd">IDS_APP_TITLE</link>&#160;&#160;&#160;103</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1a77a06326b569136edbb6c766bc98c33c">IDD_ABOUTBOX</link>&#160;&#160;&#160;103</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1a589e0105bc3e8681893dbf51210ceeec">IDM_ABOUT</link>&#160;&#160;&#160;104</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1a79aeed168a959b22b32169e25f8c1f4d">IDM_EXIT</link>&#160;&#160;&#160;105</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1ada4e016f41f888392b4593fb06ec30c6">IDI_TEXTDIALOGSAMPLE</link>&#160;&#160;&#160;107</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1a861a8cb71616b4615a5823bcf4bff6e3">IDI_SMALL</link>&#160;&#160;&#160;108</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1a1bcb09c5d8ed79c19adef9966f1611c9">IDC_TEXTDIALOGSAMPLE</link>&#160;&#160;&#160;109</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1a9772c84d39896ad00b9aeb34b15d324d">IDR_MAINFRAME</link>&#160;&#160;&#160;128</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1a47e8d200dc6011ad0e877103b2ca518e">IDI_MYICON</link>&#160;&#160;&#160;201</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1acfb35c4efbc593430638b09db17f2870">IDC_BUTTON1</link>&#160;&#160;&#160;1000</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1a6acf6d252c94ab75397fd635ba891820">IDC_BUTTON2</link>&#160;&#160;&#160;1001</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1ac815623c2e290aaaa0cb5b4fe1a9c250">IDC_SIZE_SLIDER</link>&#160;&#160;&#160;1002</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1ab4e21846d3aafa3b25776fb8a9f1349e">IDC_SIZE_LABEL</link>&#160;&#160;&#160;1003</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1af2bfc1a3289259238891ce6c5dbad731">IDC_INPUT_TEXT</link>&#160;&#160;&#160;1005</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1ac664e8706a326bb8075ef8c0c68994a1">IDC_FONT_LIST</link>&#160;&#160;&#160;1006</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1a5b2ec9538c6aa2df05ccd5dcf1b96b77">IDC_BOLD</link>&#160;&#160;&#160;1008</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1af51c6cfd15b5882f8626b0903738fd7e">IDC_ITALIC</link>&#160;&#160;&#160;1009</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1aa1c710246b8a9ecf74161fc9a5ce7990">IDC_CHECK4</link>&#160;&#160;&#160;1010</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1a6db3f2481d01b31a2a3a6611399c759d">IDC_UNDERLINE</link>&#160;&#160;&#160;1010</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1ac93033490bc8943cfc82ec3b40e5cd74">IDC_STATIC</link>&#160;&#160;&#160;-1</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1a5e37819f33cd3dbfdfaf2d3c13f4fc7b">IDC_DWRITE_TEXT</link>&#160;&#160;&#160;-1</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1ae6ef9058da3d1f2efdc365d6643d1de3">VER_FILEVERSION</link>&#160;&#160;&#160;2,0,1,0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1a9ab9575a5fdacc8d78fb6a6a982bb060">VER_FILEVERSION_STR</link>&#160;&#160;&#160;&quot;2.0.1.0\0&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1a1f0c72807dfc9de46855bff55bae541c">VER_PRODUCTVERSION</link>&#160;&#160;&#160;2,0,1,0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1a5084df706ac15e76da275c143313f3d9">VER_PRODUCTVERSION_STR</link>&#160;&#160;&#160;&quot;2.0.1.0\0&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1a1f1f8dc49fd0561cf19429a6f0296ab3">VER_DEBUG</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1ae5e9111e9af54e6a31e3f8b369cd3e19">VER_COMPANYNAME_STR</link>&#160;&#160;&#160;&quot;NeHe Productions\0&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1ad53fc999ea2c9ed67903bcc0bc88f257">VER_FILEDESCRIPTION_STR</link>&#160;&#160;&#160;&quot;NeHe Lesson05 OpenGL\0&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1a9c575d8650180954b0a0318d0bb30c71">VER_INTERNALNAME_STR</link>&#160;&#160;&#160;&quot;Lesson05\0&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1a0592f3cc57ce5994c8339bd057ae130c">VER_LEGALCOPYRIGHT_STR</link>&#160;&#160;&#160;&quot;No patent. For free use.\0&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1a9532e03b291a013007c17978f72d1a80">VER_LEGALTRADEMARKS1_STR</link>&#160;&#160;&#160;&quot;Neon Helium Productions\0&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1a3788d012ee2bbc1972b1003a16608f31">VER_LEGALTRADEMARKS2_STR</link>&#160;&#160;&#160;&quot;See usage rules on www -&gt; nehe.gamedev.net\0&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1abfbc08ce9e78d5afc2d0c129643d9909">VER_ORIGINALFILENAME_STR</link>&#160;&#160;&#160;&quot;Lesson05.exe\0&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1ad051d3f058991a313899785727ae6fd4">VER_DATE_BUILD</link>&#160;&#160;&#160;&quot;October 2020\0&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1aa559c3e72b87773444a1b3e0a1ea8502">VER_COMMENTS</link>&#160;&#160;&#160;&quot;Paradigm : one source for multiple free C compilers\0&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1a52785d1d76582d8ac8f0354dae4c6c8d">VER_SUPPORT</link>&#160;&#160;&#160;&quot;thierry.dechaize@gmail.com\0&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_resource_8h_1a7bdca6a0c9edff2b7b59a59ef0298862">VER_USERS</link>&#160;&#160;&#160;&quot;Anyone, unlimited.\0&quot;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Les définitions utilisées par le programme et les ressources. </para>
+
+<para>Comments manageable by Doxygen</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Created by Thierry Dechaize to verify paradigm : one source for multiple C Compilers </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>2.0.1.0 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>28 octobre 2020</para>
+</formalpara>
+Rien à dire, il faut lire. </para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_resource_8h_1af0f17366b0d5062edb98fa2c199fc542"/><section>
+    <title>HEADER_RESOURCE__INCLUDED</title>
+<indexterm><primary>HEADER_RESOURCE__INCLUDED</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>HEADER_RESOURCE__INCLUDED</secondary></indexterm>
+<para><computeroutput>#define HEADER_RESOURCE__INCLUDED</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1a5b2ec9538c6aa2df05ccd5dcf1b96b77"/><section>
+    <title>IDC_BOLD</title>
+<indexterm><primary>IDC_BOLD</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>IDC_BOLD</secondary></indexterm>
+<para><computeroutput>#define IDC_BOLD&#160;&#160;&#160;1008</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1acfb35c4efbc593430638b09db17f2870"/><section>
+    <title>IDC_BUTTON1</title>
+<indexterm><primary>IDC_BUTTON1</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>IDC_BUTTON1</secondary></indexterm>
+<para><computeroutput>#define IDC_BUTTON1&#160;&#160;&#160;1000</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1a6acf6d252c94ab75397fd635ba891820"/><section>
+    <title>IDC_BUTTON2</title>
+<indexterm><primary>IDC_BUTTON2</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>IDC_BUTTON2</secondary></indexterm>
+<para><computeroutput>#define IDC_BUTTON2&#160;&#160;&#160;1001</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1aa1c710246b8a9ecf74161fc9a5ce7990"/><section>
+    <title>IDC_CHECK4</title>
+<indexterm><primary>IDC_CHECK4</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>IDC_CHECK4</secondary></indexterm>
+<para><computeroutput>#define IDC_CHECK4&#160;&#160;&#160;1010</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1a5e37819f33cd3dbfdfaf2d3c13f4fc7b"/><section>
+    <title>IDC_DWRITE_TEXT</title>
+<indexterm><primary>IDC_DWRITE_TEXT</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>IDC_DWRITE_TEXT</secondary></indexterm>
+<para><computeroutput>#define IDC_DWRITE_TEXT&#160;&#160;&#160;-1</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1ac664e8706a326bb8075ef8c0c68994a1"/><section>
+    <title>IDC_FONT_LIST</title>
+<indexterm><primary>IDC_FONT_LIST</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>IDC_FONT_LIST</secondary></indexterm>
+<para><computeroutput>#define IDC_FONT_LIST&#160;&#160;&#160;1006</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1af2bfc1a3289259238891ce6c5dbad731"/><section>
+    <title>IDC_INPUT_TEXT</title>
+<indexterm><primary>IDC_INPUT_TEXT</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>IDC_INPUT_TEXT</secondary></indexterm>
+<para><computeroutput>#define IDC_INPUT_TEXT&#160;&#160;&#160;1005</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1af51c6cfd15b5882f8626b0903738fd7e"/><section>
+    <title>IDC_ITALIC</title>
+<indexterm><primary>IDC_ITALIC</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>IDC_ITALIC</secondary></indexterm>
+<para><computeroutput>#define IDC_ITALIC&#160;&#160;&#160;1009</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1abb326bd165140b31acf04b893ef655ca"/><section>
+    <title>IDC_MYICON</title>
+<indexterm><primary>IDC_MYICON</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>IDC_MYICON</secondary></indexterm>
+<para><computeroutput>#define IDC_MYICON&#160;&#160;&#160;2</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1ab4e21846d3aafa3b25776fb8a9f1349e"/><section>
+    <title>IDC_SIZE_LABEL</title>
+<indexterm><primary>IDC_SIZE_LABEL</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>IDC_SIZE_LABEL</secondary></indexterm>
+<para><computeroutput>#define IDC_SIZE_LABEL&#160;&#160;&#160;1003</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1ac815623c2e290aaaa0cb5b4fe1a9c250"/><section>
+    <title>IDC_SIZE_SLIDER</title>
+<indexterm><primary>IDC_SIZE_SLIDER</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>IDC_SIZE_SLIDER</secondary></indexterm>
+<para><computeroutput>#define IDC_SIZE_SLIDER&#160;&#160;&#160;1002</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1ac93033490bc8943cfc82ec3b40e5cd74"/><section>
+    <title>IDC_STATIC</title>
+<indexterm><primary>IDC_STATIC</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>IDC_STATIC</secondary></indexterm>
+<para><computeroutput>#define IDC_STATIC&#160;&#160;&#160;-1</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1a1bcb09c5d8ed79c19adef9966f1611c9"/><section>
+    <title>IDC_TEXTDIALOGSAMPLE</title>
+<indexterm><primary>IDC_TEXTDIALOGSAMPLE</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>IDC_TEXTDIALOGSAMPLE</secondary></indexterm>
+<para><computeroutput>#define IDC_TEXTDIALOGSAMPLE&#160;&#160;&#160;109</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1a6db3f2481d01b31a2a3a6611399c759d"/><section>
+    <title>IDC_UNDERLINE</title>
+<indexterm><primary>IDC_UNDERLINE</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>IDC_UNDERLINE</secondary></indexterm>
+<para><computeroutput>#define IDC_UNDERLINE&#160;&#160;&#160;1010</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1a77a06326b569136edbb6c766bc98c33c"/><section>
+    <title>IDD_ABOUTBOX</title>
+<indexterm><primary>IDD_ABOUTBOX</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>IDD_ABOUTBOX</secondary></indexterm>
+<para><computeroutput>#define IDD_ABOUTBOX&#160;&#160;&#160;103</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1aa9b6008c47cd133dfc8910da61d25547"/><section>
+    <title>IDD_TEXTDIALOGSAMPLE_DIALOG</title>
+<indexterm><primary>IDD_TEXTDIALOGSAMPLE_DIALOG</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>IDD_TEXTDIALOGSAMPLE_DIALOG</secondary></indexterm>
+<para><computeroutput>#define IDD_TEXTDIALOGSAMPLE_DIALOG&#160;&#160;&#160;102</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1a47e8d200dc6011ad0e877103b2ca518e"/><section>
+    <title>IDI_MYICON</title>
+<indexterm><primary>IDI_MYICON</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>IDI_MYICON</secondary></indexterm>
+<para><computeroutput>#define IDI_MYICON&#160;&#160;&#160;201</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1a861a8cb71616b4615a5823bcf4bff6e3"/><section>
+    <title>IDI_SMALL</title>
+<indexterm><primary>IDI_SMALL</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>IDI_SMALL</secondary></indexterm>
+<para><computeroutput>#define IDI_SMALL&#160;&#160;&#160;108</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1ada4e016f41f888392b4593fb06ec30c6"/><section>
+    <title>IDI_TEXTDIALOGSAMPLE</title>
+<indexterm><primary>IDI_TEXTDIALOGSAMPLE</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>IDI_TEXTDIALOGSAMPLE</secondary></indexterm>
+<para><computeroutput>#define IDI_TEXTDIALOGSAMPLE&#160;&#160;&#160;107</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1a589e0105bc3e8681893dbf51210ceeec"/><section>
+    <title>IDM_ABOUT</title>
+<indexterm><primary>IDM_ABOUT</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>IDM_ABOUT</secondary></indexterm>
+<para><computeroutput>#define IDM_ABOUT&#160;&#160;&#160;104</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1a79aeed168a959b22b32169e25f8c1f4d"/><section>
+    <title>IDM_EXIT</title>
+<indexterm><primary>IDM_EXIT</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>IDM_EXIT</secondary></indexterm>
+<para><computeroutput>#define IDM_EXIT&#160;&#160;&#160;105</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1a9772c84d39896ad00b9aeb34b15d324d"/><section>
+    <title>IDR_MAINFRAME</title>
+<indexterm><primary>IDR_MAINFRAME</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>IDR_MAINFRAME</secondary></indexterm>
+<para><computeroutput>#define IDR_MAINFRAME&#160;&#160;&#160;128</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1a636c9aea2a8d16b73e43df39b3e0e7bd"/><section>
+    <title>IDS_APP_TITLE</title>
+<indexterm><primary>IDS_APP_TITLE</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>IDS_APP_TITLE</secondary></indexterm>
+<para><computeroutput>#define IDS_APP_TITLE&#160;&#160;&#160;103</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1aa559c3e72b87773444a1b3e0a1ea8502"/><section>
+    <title>VER_COMMENTS</title>
+<indexterm><primary>VER_COMMENTS</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>VER_COMMENTS</secondary></indexterm>
+<para><computeroutput>#define VER_COMMENTS&#160;&#160;&#160;&quot;Paradigm : one source for multiple free C compilers\0&quot;</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1ae5e9111e9af54e6a31e3f8b369cd3e19"/><section>
+    <title>VER_COMPANYNAME_STR</title>
+<indexterm><primary>VER_COMPANYNAME_STR</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>VER_COMPANYNAME_STR</secondary></indexterm>
+<para><computeroutput>#define VER_COMPANYNAME_STR&#160;&#160;&#160;&quot;NeHe Productions\0&quot;</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1ad051d3f058991a313899785727ae6fd4"/><section>
+    <title>VER_DATE_BUILD</title>
+<indexterm><primary>VER_DATE_BUILD</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>VER_DATE_BUILD</secondary></indexterm>
+<para><computeroutput>#define VER_DATE_BUILD&#160;&#160;&#160;&quot;October 2020\0&quot;</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1a1f1f8dc49fd0561cf19429a6f0296ab3"/><section>
+    <title>VER_DEBUG</title>
+<indexterm><primary>VER_DEBUG</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>VER_DEBUG</secondary></indexterm>
+<para><computeroutput>#define VER_DEBUG&#160;&#160;&#160;0</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1ad53fc999ea2c9ed67903bcc0bc88f257"/><section>
+    <title>VER_FILEDESCRIPTION_STR</title>
+<indexterm><primary>VER_FILEDESCRIPTION_STR</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>VER_FILEDESCRIPTION_STR</secondary></indexterm>
+<para><computeroutput>#define VER_FILEDESCRIPTION_STR&#160;&#160;&#160;&quot;NeHe Lesson05 OpenGL\0&quot;</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1ae6ef9058da3d1f2efdc365d6643d1de3"/><section>
+    <title>VER_FILEVERSION</title>
+<indexterm><primary>VER_FILEVERSION</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>VER_FILEVERSION</secondary></indexterm>
+<para><computeroutput>#define VER_FILEVERSION&#160;&#160;&#160;2,0,1,0</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1a9ab9575a5fdacc8d78fb6a6a982bb060"/><section>
+    <title>VER_FILEVERSION_STR</title>
+<indexterm><primary>VER_FILEVERSION_STR</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>VER_FILEVERSION_STR</secondary></indexterm>
+<para><computeroutput>#define VER_FILEVERSION_STR&#160;&#160;&#160;&quot;2.0.1.0\0&quot;</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1a9c575d8650180954b0a0318d0bb30c71"/><section>
+    <title>VER_INTERNALNAME_STR</title>
+<indexterm><primary>VER_INTERNALNAME_STR</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>VER_INTERNALNAME_STR</secondary></indexterm>
+<para><computeroutput>#define VER_INTERNALNAME_STR&#160;&#160;&#160;&quot;Lesson05\0&quot;</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1a0592f3cc57ce5994c8339bd057ae130c"/><section>
+    <title>VER_LEGALCOPYRIGHT_STR</title>
+<indexterm><primary>VER_LEGALCOPYRIGHT_STR</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>VER_LEGALCOPYRIGHT_STR</secondary></indexterm>
+<para><computeroutput>#define VER_LEGALCOPYRIGHT_STR&#160;&#160;&#160;&quot;No patent. For free use.\0&quot;</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1a9532e03b291a013007c17978f72d1a80"/><section>
+    <title>VER_LEGALTRADEMARKS1_STR</title>
+<indexterm><primary>VER_LEGALTRADEMARKS1_STR</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>VER_LEGALTRADEMARKS1_STR</secondary></indexterm>
+<para><computeroutput>#define VER_LEGALTRADEMARKS1_STR&#160;&#160;&#160;&quot;Neon Helium Productions\0&quot;</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1a3788d012ee2bbc1972b1003a16608f31"/><section>
+    <title>VER_LEGALTRADEMARKS2_STR</title>
+<indexterm><primary>VER_LEGALTRADEMARKS2_STR</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>VER_LEGALTRADEMARKS2_STR</secondary></indexterm>
+<para><computeroutput>#define VER_LEGALTRADEMARKS2_STR&#160;&#160;&#160;&quot;See usage rules on www -&gt; nehe.gamedev.net\0&quot;</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1abfbc08ce9e78d5afc2d0c129643d9909"/><section>
+    <title>VER_ORIGINALFILENAME_STR</title>
+<indexterm><primary>VER_ORIGINALFILENAME_STR</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>VER_ORIGINALFILENAME_STR</secondary></indexterm>
+<para><computeroutput>#define VER_ORIGINALFILENAME_STR&#160;&#160;&#160;&quot;Lesson05.exe\0&quot;</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1a1f0c72807dfc9de46855bff55bae541c"/><section>
+    <title>VER_PRODUCTVERSION</title>
+<indexterm><primary>VER_PRODUCTVERSION</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>VER_PRODUCTVERSION</secondary></indexterm>
+<para><computeroutput>#define VER_PRODUCTVERSION&#160;&#160;&#160;2,0,1,0</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1a5084df706ac15e76da275c143313f3d9"/><section>
+    <title>VER_PRODUCTVERSION_STR</title>
+<indexterm><primary>VER_PRODUCTVERSION_STR</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>VER_PRODUCTVERSION_STR</secondary></indexterm>
+<para><computeroutput>#define VER_PRODUCTVERSION_STR&#160;&#160;&#160;&quot;2.0.1.0\0&quot;</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1a52785d1d76582d8ac8f0354dae4c6c8d"/><section>
+    <title>VER_SUPPORT</title>
+<indexterm><primary>VER_SUPPORT</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>VER_SUPPORT</secondary></indexterm>
+<para><computeroutput>#define VER_SUPPORT&#160;&#160;&#160;&quot;thierry.dechaize@gmail.com\0&quot;</computeroutput></para></section>
+<anchor xml:id="_resource_8h_1a7bdca6a0c9edff2b7b59a59ef0298862"/><section>
+    <title>VER_USERS</title>
+<indexterm><primary>VER_USERS</primary><secondary>resource.h</secondary></indexterm>
+<indexterm><primary>resource.h</primary><secondary>VER_USERS</secondary></indexterm>
+<para><computeroutput>#define VER_USERS&#160;&#160;&#160;&quot;Anyone, unlimited.\0&quot;</computeroutput></para></section>
+</section>
+</section>

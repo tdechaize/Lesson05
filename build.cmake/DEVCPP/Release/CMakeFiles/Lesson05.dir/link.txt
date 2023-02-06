@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\Lesson05.dir/objects.a
+C:\RedPanda-Cpp\MinGW64\bin\ar.exe qc CMakeFiles\Lesson05.dir/objects.a @CMakeFiles\Lesson05.dir\objects1
+C:\RedPanda-Cpp\MinGW64\bin\gcc.exe  -m64  -O3 -s -DNDEBUG -Wl,--whole-archive CMakeFiles\Lesson05.dir/objects.a -Wl,--no-whole-archive -o C:\src\OpenGL\NeHe_Lesson05-master\binDevCpp\Release\Lesson05.exe -Wl,--out-implib,C:\src\OpenGL\NeHe_Lesson05-master\binDevCpp\Release\libLesson05.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Lesson05.dir\linkLibs.rsp

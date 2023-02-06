@@ -1,0 +1,16 @@
+digraph "ReSizeGLScene"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [label="ReSizeGLScene",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Fonction ReSizeGLScene : redimensionnement de la fenêtre Windows gérant OpenGL."];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="CreateGLWindow",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_lesson05_8c.html#ae5f043c9df9b9e5e0e26d567feeeb1bc",tooltip="Creation of our OpenGL Window."];
+  Node2 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="WinMain",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_lesson05_8c.html#a661c2abc03926acfaeb93b4ae7db4943",tooltip="Creation of our application on Windows System (not console application) *."];
+  Node1 -> Node4 [dir="back",color="steelblue1",style="solid"];
+  Node4 [label="WndProc",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$_lesson05_8c.html#ae749e989b362e19783c7af4a2bf46c95",tooltip="Fonction CALLBACK de traitement des messages Windows."];
+  Node4 -> Node2 [dir="back",color="steelblue1",style="solid"];
+}

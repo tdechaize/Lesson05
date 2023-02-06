@@ -54,20 +54,22 @@ Tests :
 		Deux configurations utilisées : "Debug Mingw32 official" et "Release Mingw32 official"
 		Ok, ca fonctionne avec le compilateur MingW officiel.
 
-B) GNU GCC Compiler Mingw64 CB (version 8.1.0, version 64 bits) 
+B) GNU GCC Compiler Mingw64 CB (+ version GCC/mingw64 -> 11.2.0, version 64 bits) 
 
-Celui de la version officielle site Web de Sourceforge :
+Celui de la version officielle site Web de Sourceforge (incluant un compilateur GCC avec MingW) :
 	https://sourceforge.net/projects/codeblocks/files/Binaries/20.03/Windows/codeblocks-20.03mingw-setup.exe
 
 Il faut procéder à l'installation de Code::Blocks version 20.03 intégrant Mingw, mais avec une mise à jour de GCC en 64 bits.
+Cette mise à jour provient du site MINGW64 et le fichier à télécharger se denomme : mingw-18.0-without-git.exe.
+Il faut choisir comme répertoire d'installation C:\CodeBlocks
 
-Prérequis : On installe Code::Blocks + un compilateur GCC 64 bits sur le répertoire proposé par défaut C:\Program Files\CodeBlocks
+On installe ainsi l'IDE Code::Blocks + un compilateur GCC 64 bits sur le répertoire  C:\CodeBlocks
 	Puis, dans Code::Blocks, il faut modifier la configuration du nouveau compilateur dans le menu "Settings" puis "Compiler".
 	On procède alors à une copie du "nom du compilateur" référencé par défaut (GCC de Mingw), et on le renomme en indiquant 
 	par exemple "GNU GCC Compiler CB"
 
 Toolchain executables 
-	C:\Program Files\CodeBlocks\MinGW (puis répertoire \bin recherché automatiquement)
+	C:\CodeBlocks\MinGW (puis répertoire \bin recherché automatiquement)
 	compilateur C : 			gcc.exe
 	compilateur C++ : 			g++.exe	
 	linker for dynamic lib : 	g++.exe
@@ -77,31 +79,21 @@ Toolchain executables
 	make program : 				mingw32-make.exe
 	
 Search directories :
-	a) compiler : 			C:\Program Files\CodeBlocks\MinGW\x86_64-w64-mingw32\include
-	b) linker : 			C:\Program Files\CodeBlocks\MinGW\x86_64-w64-mingw32\lib  puis C:\Program Files\CodeBlocks\MinGW\lib
-	a) resource compiler : 	C:\Program Files\CodeBlocks\MinGW\x86_64-w64-mingw32\include
+	a) compiler : 			C:\CodeBlocks\MinGW\x86_64-w64-mingw32\include
+	b) linker : 			C:\CodeBlocks\MinGW\x86_64-w64-mingw32\lib  puis C:\Program Files\CodeBlocks\MinGW\lib
+	a) resource compiler : 	C:\CodeBlocks\MinGW\x86_64-w64-mingw32\include
 
 Affichage de la commande : "g++.exe -v" ->
 Using built-in specs.
 COLLECT_GCC=g++
-COLLECT_LTO_WRAPPER=C:/CodeBlocks/MinGW/bin/../libexec/gcc/x86_64-w64-mingw32/8.1.0/lto-wrapper.exe
+COLLECT_LTO_WRAPPER=c:/codeblocks/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe
 Target: x86_64-w64-mingw32
-Configured with: ../../../src/gcc-8.1.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 
---prefix=/mingw64 --with-sysroot=/c/mingw810/x86_64-810-posix-seh-rt_v6-rev0/mingw64 --enable-shared --enable-static --disable-multilib 
---enable-languages=c,c++,fortran,lto --enable-libstdcxx-time=yes --enable-threads=posix --enable-libgomp --enable-libatomic --enable-lto 
---enable-graphite --enable-checking=release --enable-fully-dynamic-string --enable-version-specific-runtime-libs --disable-libstdcxx-pch 
---disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers 
---with-gnu-as --with-gnu-ld --with-arch=nocona --with-tune=core2 --with-libiconv --with-system-zlib --with-gmp=/c/mingw810/prerequisites/x86_64-w64-mingw32-static 
---with-mpfr=/c/mingw810/prerequisites/x86_64-w64-mingw32-static --with-mpc=/c/mingw810/prerequisites/x86_64-w64-mingw32-static 
---with-isl=/c/mingw810/prerequisites/x86_64-w64-mingw32-static --with-pkgversion='x86_64-posix-seh-rev0, Built by MinGW-W64 project' 
---with-bugurl=https://sourceforge.net/projects/mingw-w64 CFLAGS='-O2 -pipe -fno-ident -I/c/mingw810/x86_64-810-posix-seh-rt_v6-rev0/mingw64/opt/include 
--I/c/mingw810/prerequisites/x86_64-zlib-static/include -I/c/mingw810/prerequisites/x86_64-w64-mingw32-static/include' CXXFLAGS='-O2 -pipe -fno-ident 
--I/c/mingw810/x86_64-810-posix-seh-rt_v6-rev0/mingw64/opt/include -I/c/mingw810/prerequisites/x86_64-zlib-static/include 
--I/c/mingw810/prerequisites/x86_64-w64-mingw32-static/include' CPPFLAGS=' -I/c/mingw810/x86_64-810-posix-seh-rt_v6-rev0/mingw64/opt/include 
--I/c/mingw810/prerequisites/x86_64-zlib-static/include -I/c/mingw810/prerequisites/x86_64-w64-mingw32-static/include' LDFLAGS='-pipe -fno-ident 
--L/c/mingw810/x86_64-810-posix-seh-rt_v6-rev0/mingw64/opt/lib -L/c/mingw810/prerequisites/x86_64-zlib-static/lib -L/c/mingw810/prerequisites/x86_64-w64-mingw32-static/lib '
+Configured with: ../src/configure --enable-languages=c,c++ --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 
+--disable-multilib --prefix=/c/temp/gcc/dest --with-sysroot=/c/temp/gcc/dest --disable-libstdcxx-pch --disable-libstdcxx-verbose --disable-nls 
+--disable-shared --disable-win32-registry --enable-threads=posix --enable-libgomp --with-zstd=/c/mingw --disable-bootstrap
 Thread model: posix
-gcc version 8.1.0 (x86_64-posix-seh-rev0, Built by MinGW-W64 project)
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.2.0 (GCC)
 	
 Tests :
 	a) test n° 1 : 
@@ -119,11 +111,11 @@ Tests :
 C) Red Panda Dev-Cpp (version gcc 10.3.0) (64 bits) 
 
 L'outil Dev-Cpp n'étant plus maintenu depuis 2016, je me suis tourné vers la version repackagé de cet outil daté de 2022.
-La version officielle site Web de SourceForge : https://sourceforge.net/projects/redpanda-cpp/files/1.0.0/RedPanda.C++.1.0.0.win64.MinGW-w64.X86_64.GCC.10.3.Setup.exe
-Prérequis : on installe "Red Panda" Dev-Cpp sur le répertoire par défaut C:\Program Files\RedPanda-Cpp avec une version de GCC 64 bits, version 10.3
+La version officielle site Web de SourceForge : https://sourceforge.net/projects/redpanda-cpp/files/2.1.0/RedPanda.C++.2.10.win64.MinGW-w64.X86_64.GCC.11.2.Setup.exe
+on installe ainsi "Red Panda" Dev-Cpp sur le répertoire par défaut C:\RedPanda-Cpp avec une version de GCC 64 bits, version 11.2
 			
 Toolchain executables : 
-	C:\Dev-Cpp\MinGW64 (puis répertoire \bin )
+	C:\RedPanda-Cpp\MinGW64 (puis répertoire \bin )
 	compilateur C : 			gcc.exe  
 	compilateur C++ : 			g++.exe  
 	linker for dynamic lib : 	g++.exe 
@@ -133,28 +125,43 @@ Toolchain executables :
 	make program : 				mingw32-make.exe
 
 Search directories :
-	a) compiler : 			C:\Dev-Cpp\MinGW64\x86_64-w64-mingw32\include
-	b) linker : 			C:\Dev-Cpp\MinGW64\x86_64-w64-mingw32\lib
-	a) resource compiler : 	C:\Dev-Cpp\MinGW64\x86_64-w64-mingw32\include
+	a) compiler : 			C:\RedPanda-Cpp\MinGW64\x86_64-w64-mingw32\include
+	b) linker : 			C:\RedPanda-Cpp\MinGW64\x86_64-w64-mingw32\lib
+	a) resource compiler : 	C:\RedPanda-Cpp\MinGW64\x86_64-w64-mingw32\include
 	
-Affichage de la commande : "g++.exe -v" ->
+Affichage de la commande : g++ -v
 Using built-in specs.
 COLLECT_GCC=g++
-COLLECT_LTO_WRAPPER=C:/Program\ Files/RedPanda-Cpp/MinGW64/bin/../lib/gcc/x86_64-w64-mingw32/10.3.0/lto-wrapper.exe
+COLLECT_LTO_WRAPPER=C:/Program\ Files/RedPanda-Cpp/MinGW64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe
 Target: x86_64-w64-mingw32
-Configured with: ../gcc-10.3.0/configure --prefix=/mingw64 --with-local-prefix=/mingw64/local --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32
- --target=x86_64-w64-mingw32 --with-native-system-header-dir=/mingw64/x86_64-w64-mingw32/include --libexecdir=/mingw64/lib --enable-bootstrap --enable-checking=release
- --with-arch=x86-64 --with-tune=generic --enable-languages=c,lto,c++,fortran,ada,objc,obj-c++,jit --enable-shared --enable-static --enable-libatomic 
- --enable-threads=posix --enable-graphite --enable-fully-dynamic-string --enable-libstdcxx-filesystem-ts=yes --enable-libstdcxx-time=yes 
- --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-lto --enable-libgomp --disable-multilib --disable-rpath --disable-win32-registry 
- --disable-nls --disable-werror --disable-symvers --with-libiconv --with-system-zlib --with-gmp=/mingw64 --with-mpfr=/mingw64 --with-mpc=/mingw64 
- --with-isl=/mingw64 --with-pkgversion='Rev5, Built by MSYS2 project' --with-bugurl=https://github.com/msys2/MINGW-packages/issues --with-gnu-as 
- --with-gnu-ld --with-boot-ldflags='-pipe -Wl,--dynamicbase,--high-entropy-va,--nxcompat,--default-image-base-high -Wl,--disable-dynamicbase 
- -static-libstdc++ -static-libgcc' 'LDFLAGS_FOR_TARGET=-pipe -Wl,--dynamicbase,--high-entropy-va,--nxcompat,--default-image-base-high' 
- --enable-linker-plugin-flags='LDFLAGS=-static-libstdc++\ -static-libgcc\ -pipe\ -Wl,--dynamicbase,--high-entropy-va,--nxcompat,--default-image-base-high\ -Wl,--stack,12582912'
+Configured with: ../../../src/gcc-11.2.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 
+--prefix=/mingw64 --with-sysroot=/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev1/mingw64 --enable-host-shared 
+--disable-multilib --enable-languages=c,c++,lto --enable-libstdcxx-time=yes --enable-threads=posix --enable-libgomp --enable-libatomic 
+--enable-lto --enable-graphite --enable-checking=release --enable-fully-dynamic-string --enable-version-specific-runtime-libs 
+--enable-libstdcxx-filesystem-ts=yes --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath 
+--disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch=nocona 
+--with-tune=core2 --with-libiconv --with-system-zlib --with-gmp=/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static 
+--with-mpfr=/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static 
+--with-mpc=/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static 
+--with-isl=/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static 
+--with-pkgversion='x86_64-posix-seh-rev1, Built by MinGW-W64 project' --with-bugurl=https://sourceforge.net/projects/mingw-w64 
+CFLAGS='-O2 -pipe -fno-ident -I/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev1/mingw64/opt/include 
+-I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-zlib-static/include 
+-I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static/include' CXXFLAGS='-O2 -pipe -fno-ident 
+-I/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev1/mingw64/opt/include 
+-I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-zlib-static/include 
+-I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static/include' 
+CPPFLAGS=' -I/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev1/mingw64/opt/include 
+-I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-zlib-static/include 
+-I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static/include' LDFLAGS='-pipe -fno-ident 
+-L/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev1/mingw64/opt/lib 
+-L/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-zlib-static/lib 
+-L/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static/lib 
+' LD_FOR_TARGET=/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev1/mingw64/bin/ld.exe --with-boot-ldflags=' -Wl,--disable-dynamicbase 
+-static-libstdc++ -static-libgcc'
 Thread model: posix
-Supported LTO compression algorithms: zlib zstd
-gcc version 10.3.0 (Rev5, Built by MSYS2 project)
+Supported LTO compression algorithms: zlib
+gcc version 11.2.0 (x86_64-posix-seh-rev1, Built by MinGW-W64 project)
 
 Tests :
 	a) test n° 1 : 
@@ -176,7 +183,7 @@ Il faut telecharger l'utilitaire d'installation setup-x86_64.exe, qui sert aussi
 La version la plus récente de la DLL Cygwin (Cygwin1.dll obligatoire pour le lancement d'un exécutable généré sous CYGWIN) est la 3.2.0.
 
 Prérequis : on installe CYGWIN64 sur le répertoire proposé par défaut : C:\cygwin64, avec les deux compilateurs GCC récents (version x86 et X64). 
-Ces deux compilateurs sont configrés sous Code::Blocks, j'ai renommé le deuxième compilateur en "Cygwin GCC 64"
+Ces deux compilateurs sont configurés sous Code::Blocks, j'ai renommé le deuxième compilateur en "Cygwin GCC 64"
 au niveau du menu "Settings" puis "Compiler"
 			
 Toolchain executables :
@@ -249,10 +256,10 @@ Trois solutions :
 E) Installation d'une version de MINGW32 "packagée" Winlibs (version GCC 12.2.0 32 bits)
 
 Pour mémoire, j'ai installé la version officielle de Mingw32 avec l'exécutable "mingw-get-setup.exe" sur C:\MingW
-Et, j'ai installé un environnement CMingw32 avec la récupération d'un fichier zip disponible sur : https://winlibs.com/
-Cette archive a pour nom : winlibs-i686-posix-dwarf-gcc-12.2.0-llvm-14.0.6-mingw-w64ucrt-10.0.0-r2.7z, je la décompresse sur
+Et, j'ai installé un environnement Mingw32 avec la récupération d'un fichier zip disponible sur : https://winlibs.com/
+Cette archive a pour nom : winlibs-i686-posix-dwarf-gcc-12.2.0-llvm-15.0.7-mingw-w64ucrt-10.0.0-r4.7z, je la décompresse sur
 le répertoire C:\mingw32 (j'ai lu quelque part qu'il fallait conserver ce nom de répertoire), avec une version ucrt.
-On a ainsi installé les dernières versions "packagées" de GCC 12.2.0 + MinGW-w64 9.0.0 + (+ LLVM/Clang/LLD/LLDB llvm-14.0.6 )
+On a ainsi installé les dernières versions "packagées" de GCC 12.2.0 + MinGW-w64 9.0.0 + (+ LLVM/Clang/LLD/LLDB llvm-15.0.7)
 
 Toolchain executables : 
 	C:\mingw32 (puis répertoire \bin)
@@ -268,6 +275,28 @@ Search directories :
 	a) compiler : 			C:\mingw32\i686-w64-mingw32\include
 	b) linker : 			C:\mingw32\i686-w64-mingw32\lib
 	a) resource compiler : 	C:\mingw32\i686-w64-mingw32\include
+
+Résultat de la commande "gcc -v
+Using built-in specs.
+COLLECT_GCC=gcc
+COLLECT_LTO_WRAPPER=c:/mingw32/bin/../libexec/gcc/i686-w64-mingw32/12.2.0/lto-wrapper.exe
+OFFLOAD_TARGET_NAMES=nvptx-none
+Target: i686-w64-mingw32
+Configured with: ../configure --prefix=/r/winlibs32ucrt_stage/31300.gcc/inst_gcc-12.2.0/share/gcc --build=i686-w64-mingw32 --host=i686-w64-mingw32 
+--enable-offload-targets=nvptx-none --with-pkgversion='MinGW-W64 i686-ucrt-posix-dwarf, built by Brecht Sanders' --with-tune=generic --enable-checking=release 
+--enable-threads=posix --with-dwarf2 --disable-sjlj-exceptions --disable-libunwind-exceptions --disable-serial-configure --disable-bootstrap 
+--enable-host-shared --enable-plugin --disable-default-ssp --disable-rpath --disable-libstdcxx-debug --disable-version-specific-runtime-libs 
+--with-stabs --disable-symvers --enable-languages=c,c++,fortran,lto,objc,obj-c++,jit --disable-gold --disable-nls --disable-stage1-checking 
+--disable-win32-registry --disable-multilib --enable-ld --enable-libquadmath --enable-libada --enable-libssp --enable-libstdcxx --enable-lto 
+--enable-fully-dynamic-string --enable-libgomp --enable-graphite --enable-mingw-wildcard --enable-libstdcxx-time --enable-libstdcxx-pch 
+--with-mpc=/d/Prog/winlibs32ucrt_stage/custombuilt --with-mpfr=/d/Prog/winlibs32ucrt_stage/custombuilt --with-gmp=/d/Prog/winlibs32ucrt_stage/custombuilt 
+--with-isl=/d/Prog/winlibs32ucrt_stage/custombuilt --enable-large-address-aware --enable-libstdcxx-backtrace --enable-install-libiberty --enable-__cxa_atexit 
+--without-included-gettext --with-diagnostics-color=auto --enable-clocale=generic --with-libiconv --with-system-zlib 
+--with-build-sysroot=/r/winlibs32ucrt_stage/31300.gcc/gcc-12.2.0/build_mingw/mingw-w64 CFLAGS='-I/d/Prog/winlibs32ucrt_stage/custombuilt/include/libdl-win32 
+-D__USE_MINGW_ACCESS' CXXFLAGS=-D__USE_MINGW_ACCESS LDFLAGS='-Wl,--dynamicbase  -Wl,--nxcompat -Wl,--tsaware'
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 12.2.0 (MinGW-W64 i686-ucrt-posix-dwarf, built by Brecht Sanders)
 
 Tests :
 	a) test n° 1 : 
@@ -285,9 +314,9 @@ Tests :
 F) Installation d'une version de MINGW64 "packagée" winlibs (version GCC 12.2.0 64 bits)
 
 Je redétaille à nouveau ci-dessous, en me focalisant sur le package 64 bits disponible sur https://winlibs.com/
-Cette archive a pour nom : winlibs-x86_64-posix-seh-gcc-12.2.0-llvm-llvm-14.0.6-mingw-w64ucrt-10.0.0-r2.7z, je la décompresse sur
+Cette archive a pour nom : winlibs-x86_64-posix-seh-gcc-12.2.0-llvm-15.0.7-mingw-w64ucrt-10.0.0-r4.7z, je la décompresse sur
 le répertoire C:\mingw64 (j'ai lu quelque part qu'il fallait conserver ce nom de répertoire).
-On a ainsi installé les dernières versions "packagées" de GCC 12.2.0 + MinGW-w64 9.0.0 avec une version ucrt ( + LLVM/Clang/LLD/LLDB llvm-14.0.6)
+On a ainsi installé les dernières versions "packagées" de GCC 12.2.0 + MinGW-w64 9.0.0 avec une version ucrt ( + LLVM/Clang/LLD/LLDB llvm-15.0.7)
 
 Toolchain executables : 
 	C:\mingw64 (puis répertoire \bin)
@@ -303,6 +332,28 @@ Search directories :
 	a) compiler : 			C:\mingw64\x86_64-w64-mingw32\include
 	b) linker : 			C:\mingw64\x86_64-w64-mingw32\lib
 	a) resource compiler : 	C:\mingw64\x86_64-w64-mingw32\include
+
+Résultat de la commande "gcc -v
+Using built-in specs.
+COLLECT_GCC=gcc
+COLLECT_LTO_WRAPPER=c:/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/lto-wrapper.exe
+OFFLOAD_TARGET_NAMES=nvptx-none
+Target: x86_64-w64-mingw32
+Configured with: ../configure --prefix=/r/winlibs64ucrt_stage/26132.gcc/inst_gcc-12.2.0/share/gcc --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 
+--enable-offload-targets=nvptx-none --with-pkgversion='MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders' --with-tune=generic --enable-checking=release 
+--enable-threads=posix --disable-sjlj-exceptions --disable-libunwind-exceptions --disable-serial-configure --disable-bootstrap --enable-host-shared 
+--enable-plugin --disable-default-ssp --disable-rpath --disable-libstdcxx-debug --disable-version-specific-runtime-libs --with-stabs --disable-symvers 
+-enable-languages=c,c++,fortran,lto,objc,obj-c++,jit --disable-gold --disable-nls --disable-stage1-checking --disable-win32-registry --disable-multilib 
+--enable-ld --enable-libquadmath --enable-libada --enable-libssp --enable-libstdcxx --enable-lto --enable-fully-dynamic-string --enable-libgomp 
+--enable-graphite --enable-mingw-wildcard --enable-libstdcxx-time --enable-libstdcxx-pch --with-mpc=/d/Prog/winlibs64ucrt_stage/custombuilt 
+--with-mpfr=/d/Prog/winlibs64ucrt_stage/custombuilt --with-gmp=/d/Prog/winlibs64ucrt_stage/custombuilt --with-isl=/d/Prog/winlibs64ucrt_stage/custombuilt 
+--enable-libstdcxx-backtrace --enable-install-libiberty --enable-__cxa_atexit --without-included-gettext --with-diagnostics-color=auto --enable-clocale=generic 
+--with-libiconv --with-system-zlib --with-build-sysroot=/r/winlibs64ucrt_stage/26132.gcc/gcc-12.2.0/build_mingw/mingw-w64 
+CFLAGS='-I/d/Prog/winlibs64ucrt_stage/custombuilt/include/libdl-win32 -D__USE_MINGW_ACCESS' 
+CXXFLAGS=-D__USE_MINGW_ACCESS LDFLAGS='-Wl,--dynamicbase -Wl,--high-entropy-va -Wl,--nxcompat -Wl,--tsaware'
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 12.2.0 (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders)
 
 Tests :
 	a) test n° 1 : 
@@ -418,10 +469,10 @@ Tests :
 		Deux configurations utilisées : "Debug TDM 64" et "Release TDM 64"
 		Ok, ca fonctionne avec le compilateur gcc de TDM en 64bits.
 
-I) Installation de MINGW64 et de MINGW32 version GCC 12.2.0 (et de CLANG aussi en version 15.0.0)) avec l'outil MSYS2
+I) Installation de MINGW64 et de MINGW32 version GCC 12.2.0 (et de CLANG aussi en version 15.0.7)) avec l'outil MSYS2
 
 La version officielle est téléchargeable sur le site Web : https://www.msys2.org/
-Le fichier de téléchargement est le suivant (à date) : msys2-x86_64-20220603.exe
+Le fichier de téléchargement est le suivant (à date) : msys2-x86_64-20230127.exe
 
 J'ai été conquis par cette nouvelle installation de MSYS qui historiquement était plutôt lié à CYGWIN.
 En effet, il est très facile de la mettre à niveau avec l'utilitaire fourni PACMAN, et la version de GCC en 32 bits ou 64 bits
@@ -446,40 +497,38 @@ Search directories :
 
 Affichage de la commande : "g++.exe -v" pour mingw32 ->
 Using built-in specs.
-COLLECT_GCC=gcc
+Using built-in specs.
+COLLECT_GCC=g++
 COLLECT_LTO_WRAPPER=C:/msys64/mingw32/bin/../lib/gcc/i686-w64-mingw32/12.2.0/lto-wrapper.exe
 Target: i686-w64-mingw32
-Configured with: ../gcc-11.2.0/configure --prefix=/mingw32 --with-local-prefix=/mingw32/local --build=i686-w64-mingw32 --host=i686-w64-mingw32
- --target=i686-w64-mingw32 --with-native-system-header-dir=/mingw32/include --libexecdir=/mingw32/lib --enable-bootstrap --enable-checking=release
- --with-arch=i686 --with-tune=generic --enable-languages=c,lto,c++,fortran,ada,objc,obj-c++,jit --enable-shared --enable-static --enable-libatomic
- --enable-threads=posix --enable-graphite --enable-fully-dynamic-string --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --disable-libstdcxx-pch
- --disable-libstdcxx-debug --enable-lto --enable-libgomp --disable-multilib --disable-rpath --disable-win32-registry --disable-nls --disable-werror 
- --disable-symvers --with-libiconv --with-system-zlib --with-gmp=/mingw32 --with-mpfr=/mingw32 --with-mpc=/mingw32 --with-isl=/mingw32 
- --with-pkgversion='Rev10, Built by MSYS2 project' --with-bugurl=https://github.com/msys2/MINGW-packages/issues --with-gnu-as --with-gnu-ld 
- --with-boot-ldflags='-pipe -Wl,--no-seh -Wl,--large-address-aware -Wl,--disable-dynamicbase -static-libstdc++ -static-libgcc' 
- 'LDFLAGS_FOR_TARGET=-pipe -Wl,--no-seh -Wl,--large-address-aware' --enable-linker-plugin-flags='LDFLAGS=-static-libstdc++\ -static-libgcc\ 
- -pipe\ -Wl,--no-seh\ -Wl,--large-address-aware\ -Wl,--stack,12582912' --disable-sjlj-exceptions --with-dwarf2
+Configured with: ../gcc-12.2.0/configure --prefix=/mingw32 --with-local-prefix=/mingw32/local --build=i686-w64-mingw32 --host=i686-w64-mingw32 
+--target=i686-w64-mingw32 --with-native-system-header-dir=/mingw32/include --libexecdir=/mingw32/lib --enable-bootstrap --enable-checking=release 
+--with-arch=pentium4 --with-tune=generic --enable-languages=c,lto,c++,fortran,ada,objc,obj-c++,jit --enable-shared --enable-static --enable-libatomic 
+--enable-threads=posix --enable-graphite --enable-fully-dynamic-string --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --disable-libstdcxx-pch 
+--enable-lto --enable-libgomp --disable-multilib --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers 
+--with-libiconv --with-system-zlib --with-gmp=/mingw32 --with-mpfr=/mingw32 --with-mpc=/mingw32 --with-isl=/mingw32 
+--with-pkgversion='Rev7, Built by MSYS2 project' --with-bugurl=https://github.com/msys2/MINGW-packages/issues --with-gnu-as --with-gnu-ld 
+--disable-libstdcxx-debug --disable-sjlj-exceptions --with-dwarf2 --with-boot-ldflags=-static-libstdc++ --with-stage1-ldflags=-static-libstdc++
 Thread model: posix
 Supported LTO compression algorithms: zlib zstd
-gcc version 12.2.0 (Rev10, Built by MSYS2 project)
+gcc version 12.2.0 (Rev7, Built by MSYS2 project)
 
 Affichage de la commande : "g++.exe -v" pour mingw64 ->
 Using built-in specs.
-COLLECT_GCC=gcc
+COLLECT_GCC=g++
 COLLECT_LTO_WRAPPER=C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/lto-wrapper.exe
 Target: x86_64-w64-mingw32
-Configured with: ../gcc-11.2.0/configure --prefix=/mingw64 --with-local-prefix=/mingw64/local --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32
- --target=x86_64-w64-mingw32 --with-native-system-header-dir=/mingw64/include --libexecdir=/mingw64/lib --enable-bootstrap --enable-checking=release
- --with-arch=x86-64 --with-tune=generic --enable-languages=c,lto,c++,fortran,ada,objc,obj-c++,jit --enable-shared --enable-static --enable-libatomic
- --enable-threads=posix --enable-graphite --enable-fully-dynamic-string --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --disable-libstdcxx-pch
- --disable-libstdcxx-debug --enable-lto --enable-libgomp --disable-multilib --disable-rpath --disable-win32-registry --disable-nls --disable-werror
- --disable-symvers --with-libiconv --with-system-zlib --with-gmp=/mingw64 --with-mpfr=/mingw64 --with-mpc=/mingw64 --with-isl=/mingw64 
- --with-pkgversion='Rev10, Built by MSYS2 project' --with-bugurl=https://github.com/msys2/MINGW-packages/issues --with-gnu-as --with-gnu-ld 
- --with-boot-ldflags='-pipe -Wl,--disable-dynamicbase -static-libstdc++ -static-libgcc' LDFLAGS_FOR_TARGET=-pipe 
- --enable-linker-plugin-flags='LDFLAGS=-static-libstdc++\ -static-libgcc\ -pipe\ -Wl,--stack,12582912'
+Configured with: ../gcc-12.2.0/configure --prefix=/mingw64 --with-local-prefix=/mingw64/local --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 
+--target=x86_64-w64-mingw32 --with-native-system-header-dir=/mingw64/include --libexecdir=/mingw64/lib --enable-bootstrap --enable-checking=release 
+--with-arch=nocona --with-tune=generic --enable-languages=c,lto,c++,fortran,ada,objc,obj-c++,jit --enable-shared --enable-static --enable-libatomic 
+--enable-threads=posix --enable-graphite --enable-fully-dynamic-string --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --disable-libstdcxx-pch 
+--enable-lto --enable-libgomp --disable-multilib --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-libiconv 
+--with-system-zlib --with-gmp=/mingw64 --with-mpfr=/mingw64 --with-mpc=/mingw64 --with-isl=/mingw64 --with-pkgversion='Rev7, Built by MSYS2 project' 
+--with-bugurl=https://github.com/msys2/MINGW-packages/issues --with-gnu-as --with-gnu-ld --disable-libstdcxx-debug --with-boot-ldflags=-static-libstdc++ 
+--with-stage1-ldflags=-static-libstdc++
 Thread model: posix
 Supported LTO compression algorithms: zlib zstd
-gcc version 12.2.0 (Rev10, Built by MSYS2 project)
+gcc version 12.2.0 (Rev7, Built by MSYS2 project)
 
 Tests :
 	a) test n° 1 : 
@@ -507,7 +556,7 @@ Prérequis : on installe VS2022 sur le répertoire proposé par défaut : C:\Program
 	J'ai donc affecté des variables d'environnement pour gérer (plus facilement !) ces évolutions :
 		KIT_WIN_NUM  valant à date 		10.0.22621.0
 		KIT_WIN_VERSION  valant à date 	10
-		VS_NUM valant à date			14.33.31629
+		VS_NUM valant à date			14.34.31933
 		VS_VERSION valant à date		2022
 		
 Toolchain executables : 
@@ -646,7 +695,7 @@ Toolchain executables :
 	linker for static lib : 	lib.exe
 	debugger :					 
 	resource compiler :			rcc.exe
-	make program : 				make.exe (voir si mingw32-make ne ferait pas mieux l'affaire)
+	make program : 				make.exe (voir si mingw32-make ne ferait pas mieux l'affaire ?)
 
 Search directories :
 	a) compiler : 			C:\dm\include\win32 puis C:\dm\stlport\stlport et enfin C:\dm\include	
@@ -751,7 +800,7 @@ en mettant les bonnes options de compilation et d'édition des liens dans la conf
     /MACHINE=X86 ou /MACHINE=X64 pour deux identifiants différents de "compilateurs".
 			
 Toolchain executables : 
-	C:\WATCOM (puis répertoire \binnt  ou \binnt64 pour la version X64 <- Attention, il doit être présent dans les répertoires supplémentaires à configurer en sus dans Code::Blocks)
+	C:\WATCOM (puis répertoire \binnt  ou \binnt64 pour la version X64 <- Attention, is doivent être présents dans les répertoires supplémentaires à configurer en sus dans Code::Blocks)
 	compilateur C : 			wcl386.exe
 	compilateur C++ : 			wcl386.exe
 	linker for dynamic lib : 	wlink.exe
@@ -824,13 +873,13 @@ Tests :
 		Deux configurations utilisées : "Debug Pelles C" et "Release Pelles C"
 		Le compilateur Pelles C ne gère pas le C++. Non OK.
 
-S) Installation de CLANG 32 bits (version llvm-14.0.6) avec une version de MINGW32 "packagée" Winlibs (version GCC 12.2.0 32 bits)
+S) Installation de CLANG 32 bits (version llvm-15.0.7) avec une version de MINGW32 "packagée" Winlibs (version GCC 12.2.0 32 bits)
 
 Pour mémoire, j'ai installé la version officielle de Mingw32 avec l'exécutable "mingw-get-setup.exe" sur C:\MingW
 Et, j'ai installé un environnement CLANG complet avec Mingw32 avec la récupération d'un fichier zip disponible sur : https://winlibs.com/
-Cette archive a pour nom : winlibs-i686-posix-dwarf-gcc-12.2.0-llvm-llvm-14.0.6-mingw-w64ucrt-10.0.0-r2.7z, je la décompresse sur
+Cette archive a pour nom : winlibs-i686-posix-dwarf-gcc-12.2.0-llvm-15.0.7-mingw-w64ucrt-10.0.0-r4.7z, je la décompresse sur
 le répertoire C:\mingw32 (j'ai lu quelque part qu'il fallait conserver ce nom de répertoire), avec une version ucrt.
-On a ainsi installé les dernières versions "packagées" de GCC 12.2.0 + LLVM/Clang/LLD/LLDB 14.0.6 + MinGW-w64 9.0.0
+On a ainsi installé les dernières versions "packagées" de GCC 12.2.0 + LLVM/Clang/LLD/LLDB 15.0.7 + MinGW-w64 9.0.0
 
 Toolchain executables : 
 	C:\mingw32 (puis répertoire \bin)
@@ -860,13 +909,13 @@ Tests :
 		Deux configurations utilisées : "Debug CLANG W32" et "Release CLANG W32"
 		Ok, ca fonctionne avec le compilateur CLANG++ sous MINGW64 avec GCC 32 bits. 
 
-T) Installation de CLANG 64 bits (version llvm-14.0.6) avec une version de MINGW64 "packagée" winlibs (version GCC 12.2.0 64 bits)
+T) Installation de CLANG 64 bits (version llvm-15.0.7) avec une version de MINGW64 "packagée" winlibs (version GCC 12.2.0 64 bits)
 
 Je redétaille à nouveau ci-dessous, en me focalisant sur le package 64 bits disponible sur https://winlibs.com/
 
-Cette archive a pour nom : winlibs-x86_64-posix-seh-gcc-12.2.0-llvm-llvm-14.0.6-mingw-w64ucrt-10.0.0-r2.7z, je la décompresse sur
+Cette archive a pour nom : winlibs-x86_64-posix-seh-gcc-12.2.0-llvm-15.0.7-mingw-w64ucrt-10.0.0-r4.7z, je la décompresse sur
 le répertoire C:\mingw64 (j'ai lu quelque part qu'il fallait conserver ce nom de répertoire).
-On a ainsi installé les dernières versions "packagées" de GCC 12.1.0 + LLVM/Clang/LLD/LLDB 14.0.6 + MinGW-w64 9.0.0 avec une version ucrt.
+On a ainsi installé les dernières versions "packagées" de GCC 12.2.0 + LLVM/Clang/LLD/LLDB 15.0.7 + MinGW-w64 9.0.0 avec une version ucrt.
 
 Toolchain executables : 
 	C:\mingw64 (puis répertoire \bin)
@@ -896,15 +945,15 @@ Tests :
 		Deux configurations utilisées : "Debug CLANG W64" et "Release CLANG W64"
 		Ok, ca fonctionne avec le compilateur CLANG++ sous MINGW64 avec GCC 64 bits. 	
 
-U) Installation de CLANG + LLVM 32 bits (version 15.0.0) avec une version de Visual Studio 2022 + un windows Kits W10/W11 (version Visual C/C++ 32 bits)
+U) Installation de CLANG + LLVM 32 bits (version 15.0.7) avec une version de Visual Studio 2022 + un windows Kits W10/W11 (version Visual C/C++ 32 bits)
 
 J'ai déjà présenté l'installation de VS 2022 et d'un Kit Windows 10, mais on doit alors rajouter celle de LLVM (+ CLANG) disponible
-sur le site Web : https://github.com/llvm/llvm-project/releases/tag/llvmorg-15.0.0
+sur le site Web : https://github.com/llvm/llvm-project/releases/tag/llvmorg-15.0.7
 
-L'installateur a pour nom "LLVM-15.0.0-win32.exe", je l'installe sur le répertoire proposé par défaut : C:\Program Files (x86)\LLVM
+L'installateur a pour nom "LLVM-15.0.7.win32.exe", je l'installe sur le répertoire proposé par défaut : C:\Program Files (x86)\LLVM
 On a ainsi installé les dernières versions "packagées" de LLVM/Clang/LLD/LLDB 15.0.0 win32 liées aux environnements Windows.
 J'ai aussi affecté deux nouvelles variables d'environnement pour gérer les évolutions de CLANG/LLVM :
-		CLANG_VERSION  valant à date 		15.0.0
+		CLANG_VERSION  valant à date 		15.0.7
 		LLVM								C:\Program Files (x86)\LLVM
 		
 Toolchain executables : 
@@ -947,12 +996,12 @@ Tests :
 		Deux configurations utilisées : "Debug CLANG X32" et "Release CLANG X32"
 		Ok, ca fonctionne avec le compilateur CLANG sous l'environnement Windows et Visual C 32 bits. 	
 
-V) Installation de CLANG + LLVM 64 bits (version 15.0.0) avec une version de Visual Studio 2022 + un windows Kits W10 (version Visual C 64 bits)
+V) Installation de CLANG + LLVM 64 bits (version 15.0.7) avec une version de Visual Studio 2022 + un windows Kits W10 (version Visual C 64 bits)
 
-Il faut ici récupérer l'environnement 64 bits de LLVM (+ CLANG) disponible sur le site Web : https://github.com/llvm/llvm-project/releases/tag/llvmorg-15.0.0
+Il faut ici récupérer l'environnement 64 bits de LLVM (+ CLANG) disponible sur le site Web : https://github.com/llvm/llvm-project/releases/tag/llvmorg-15.0.7
 
-L'installateur a pour nom "LLVM-15.0.0-win64.exe", je l'installe sur le répertoire proposé par défaut : C:\Program Files\LLVM
-On a ainsi installé les dernières versions "packagées" de LLVM/Clang/LLD/LLDB 15.0.0 win64 liées aux environnements Windows.
+L'installateur a pour nom "LLVM-15.0.7-win64.exe", je l'installe sur le répertoire proposé par défaut : C:\Program Files\LLVM
+On a ainsi installé les dernières versions "packagées" de LLVM/Clang/LLD/LLDB 15.0.7 win64 liées aux environnements Windows.
 J'ai aussi affecté une nouvelle variable d'environnement pour gérer les évolutions de CLANG/LLVM :
 		LLVM64								C:\Program Files\LLVM
 		
@@ -996,13 +1045,13 @@ Tests :
 		Deux configurations utilisées : "Debug CLANG X64" et "Release CLANG X64"
 		Ok, ca fonctionne avec le compilateur CLANG sous l'environnement Windows et Visual C 64 bits. 	
 
-W) Installation de CLANG 32 bits (version 15.0.0) avec une version de MINGW32 sous MSYS2 (version GCC 12.2.0 32 bits)
+W) Installation de CLANG 32 bits (version 15.0.7) avec une version de MINGW32 sous MSYS2 (version GCC 12.2.0 32 bits)
 
 Pour mémoire, j'ai installé la version officielle de MINGW32 avec l'exécutable "mingw-get-setup.exe" sur le répetoire par défaut C:\MinGW
-Et en complément, j'ai installé un environnement MSYS2 complet avec Mingw32 et CLANG 32 bits avec la récupération d'un fichier "msys2-x86_64-20220603.exe"
+Et en complément, j'ai installé un environnement MSYS2 complet avec Mingw32 et CLANG 32 bits avec la récupération d'un fichier "msys2-x86_64-20230127.exe"
 disponible sur :	https://repo.msys2.org/distrib/x86_64/   sur le répetoire par défaut C:\msys64
 Il y a ensuite des installations supplémentaires, avec l'utilitaire PACMAN, pour les versions de mingw32, CLANG32 et mingw64 et CLANG64.
-On a ainsi installé les dernières versions sous MSYS2 de GCC 12.2.0 + LLVM/Clang/LLD/LLDB 15.0.0 + MinGW-w64 9.0.0 en 32 bits.
+On a ainsi installé les dernières versions sous MSYS2 de GCC 12.2.0 + LLVM/Clang/LLD/LLDB 15.0.7 + MinGW-w64 9.0.0 en 32 bits.
 
 Toolchain executables : 
 	C:\msys64\mingw32 (puis répertoire \bin)
@@ -1015,10 +1064,10 @@ Toolchain executables :
 	make program : 				?
 
 Search directories :
-	a) compiler : 			C:\msys64\mingw32\lib\clang\%CLANG_VERSION%\include    puis
+	a) compiler : 			C:\msys64\mingw32\lib\clang\15.0.7\include    puis
 							C:\msys64\mingw32\include
 	b) linker : 			C:\msys64\mingw32\lib
-	a) resource compiler : 	C:\msys64\mingw32\lib\clang\%CLANG_VERSION%\include    puis
+	a) resource compiler : 	C:\msys64\mingw32\lib\clang\15.0.7\include    puis
 							C:\msys64\mingw32\include
 
 Tests :
@@ -1034,11 +1083,11 @@ Tests :
 		Deux configurations utilisées : "Debug CLANG W32" et "Release CLANG W32"
 		Ok, ca fonctionne avec le compilateur CLANG++ sous MINGW64 avec GCC 32 bits. 
 
-X) Installation de CLANG 64 bits (version 15.0.0) avec une version de MINGW64 sous MSYS2 (version GCC 12.2.0 64 bits)
+X) Installation de CLANG 64 bits (version 15.0.7) avec une version de MINGW64 sous MSYS2 (version GCC 12.2.0 64 bits)
 
 Pour mémloire, j'ai installé, avec l'utilitaire PACMAN, un environnement MSYS2 complet avec Mingw64 et CLANG 64 bits avec la récupération 
-d'un fichier "msys2-x86_64-20220603.exe"disponible sur :	https://repo.msys2.org/distrib/x86_64/   sur le répetoire par défaut C:\msys64.
-On a ainsi installé les dernières versions sous MSYS2 de GCC 12.2.0 + LLVM/Clang/LLD/LLDB 15.0.0 + MinGW-w64 9.0.0 en 64 bits.
+d'un fichier "msys2-x86_64-20230127.exe" disponible sur :	https://repo.msys2.org/distrib/x86_64/   sur le répetoire par défaut C:\msys64.
+On a ainsi installé les dernières versions sous MSYS2 de GCC 12.2.0 + LLVM/Clang/LLD/LLDB 15.0.7 + MinGW-w64 9.0.0 en 64 bits.
 
 Toolchain executables : 
 	C:\msys64\mingw64 (puis répertoire \bin)
@@ -1051,10 +1100,10 @@ Toolchain executables :
 	make program : 				?
 
 Search directories :
-	a) compiler : 			C:\msys64\mingw64\lib\clang\%CLANG_VERSION%\include     puis  
+	a) compiler : 			C:\msys64\mingw64\lib\clang\15.0.7\include     puis  
 							C:\msys64\mingw64\include
 	b) linker : 			C:\msys64\mingw64\lib
-	a) resource compiler : 	C:\msys64\mingw64\lib\clang\%CLANG_VERSION%\include     puis
+	a) resource compiler : 	C:\msys64\mingw64\lib\clang\15.0.7\include     puis
 							C:\msys64\mingw64\include
 
 Tests :
@@ -1110,25 +1159,25 @@ Paradigm : obtain one source (only one !) compatible for multiple free C Compile
     and provide for all users an development environment on Windows 11 64 bits
     the great Code::Blocks manager (version 20.3), and don't use glaux.lib or glaux.dll.
 
-	a) Mingw 32 bits, version officielle gcc 6.3.0 (very old !) : downloadable on http://sourceforge.net/projects/mingw/ (official) 
+	a) Mingw 32 bits, version officielle gcc 9.2.0 (very old !) : downloadable on http://sourceforge.net/projects/mingw/ (official) 
 	b) Mingw 64 bits included in new IDE Red Panda Dev-Cpp, version gcc 10.3.0 : donwloadable on http://sourceforge.net/projects/dev-cpp-2020/
-	c) Mingw 64 bits included in package Code::Blocks (version 20.03), version gcc 8.1.0 : downloadable on http://sourceforge.net/projects/codeblocks/files/Binaries/20.03/Windows/
+	c) Mingw 64 bits included in package Code::Blocks (version 20.03), version gcc 8.1.0 (very old !) : downloadable on http://sourceforge.net/projects/codeblocks/files/Binaries/20.03/Windows/
 	d) Mingw 32 and 64 bits packagés, version gcc 11.2.0 : downloadable on  https://winlibs.com/ (and CLANG included in, 32 and 64 bits), two kits :
-			- winlibs-i686-posix-dwarf-gcc-11.2.0-llvm-13.0.0-mingw-w64ucrt-9.0.0-r2.7z (32 bits)
-			- winlibs-x86_64-posix-seh-gcc-11.2.0-llvm-13.0.0-mingw-w64ucrt-9.0.0-r2.7z (64 bits)
-	e) Cygwin64, 32 et 64 bits, version gcc 11.0.0 : downloadable on http://www.cygwin.com/install.html (tool for install : setup-x86_64.exe)
+			- winlibs-i686-posix-dwarf-gcc-12.2.0-llvm-15.0.7-mingw-w64ucrt-10.0.0-r2.7z (32 bits)
+			- winlibs-x86_64-posix-seh-gcc-12.2.0-llvm-15.0.7-mingw-w64ucrt-10.0.0-r2.7z (64 bits)
+	e) Cygwin64, 32 et 64 bits, version gcc 11.3.0 : downloadable on http://www.cygwin.com/install.html (tool for install : setup-x86_64.exe)
 	f) TDM GCC, 32 et 64 bits, version 10.3.0 : downloadable on http://sourceforge.net/projects/TDM-GCC
-	g) MSYS2 environnement MINGW32 and MINGW64, 32 et 64 bits, version de 2022 (msys2-x86_64-20220118.exe), version gcc 11.2.0 : downloadable on https://repo.msys2.org/distrib/x86_64/msys2-x86_64-20220118.exe
+	g) MSYS2 environnement MINGW32 and MINGW64, 32 et 64 bits, version de 2022 (msys2-x86_64-20220603.exe), version gcc 12.2.0 : downloadable on https://repo.msys2.org/distrib/x86_64/msys2-x86_64-20220603.exe
 	h) Visual Studio 2022, 32 et 64 bits, community edition for free : downloadable on https://visualstudio.microsoft.com/fr/thank-you-downloading-visual-studio/?sku=Community&rel=17
 	i) Borland C/C++ 32 bits, version 5.5 : downloadable on https://developerinsider.co/download-and-install-borland-c-compiler-on-windows-10/
-	j) Digital Mars Compiler C 32 bits version 8.57 : downloadable on http://www.digitalmars.com (the more old compiler, the more bugged, dead branch !)
-	k) OpenWatcom 32 et 64 bits, version 2.0 : downloadable on http://openwatcom.mirror.fr/ (only 32 bits version run correctly !)
+	j) Digital Mars Compiler C/C++ 32 bits version 8.57 : downloadable on http://www.digitalmars.com (the more old compiler, the more bugged, dead branch !)
+	k) OpenWatcom C/C++ 32 et 64 bits, version 2.0 : downloadable on http://openwatcom.mirror.fr/ (only 32 bits version run correctly !)
 	l) Lcc and Lcc64, 32 et 64 bits: downloadable http://www.cs.virginia.edu/~lcc-win32/
-	m) PELLES C, 32 et 64 bits, version 11.0 : downloadable on http://www.smorgasbordet.com/pellesc/
-	o) CLANG, adossé aux environnements MINGW64 et MINGW32, version 13.0.0 (version gcc 12.0.0) : downloadable on https://winlibs.com/ 
-	p) CLANG, adossé aux environnements Visual Studio 2022 (+ kits Microsoft), version 13.0.0 : downloadable on https://releases.llvm.org/download.html
-	q) CLANG de la version MSYS2, adossé aux environnements MINGW64 et MINGW32, version 13.0.0 (version gcc 11.2.0) : downloadable on https://repo.msys2.org/distrib/x86_64/msys2-x86_64-20220118.exe
-	r) CLANG de la version CYGWIN, adossé aux environnements MINGW64 et MINGW32, version 8.0.0 (version gcc 11.0.0) : downloadable http://www.cygwin.com/install.html (tool for install : setup-x86_64.exe)	
+	m) PELLES C (only C) , 32 et 64 bits, version 11.0 : downloadable on http://www.smorgasbordet.com/pellesc/
+	o) CLANG, adossé aux environnements MINGW64 et MINGW32, version 15.0.7 (version gcc 12.0.0) : downloadable on https://winlibs.com/ 
+	p) CLANG, adossé aux environnements Visual Studio 2022 (+ kits Microsoft), version 15.0.7 : downloadable on https://releases.llvm.org/download.html
+	q) CLANG de la version MSYS2, adossé aux environnements MINGW64 et MINGW32, version 15.0.0 (version gcc 12.2.0) : downloadable on https://repo.msys2.org/distrib/x86_64/msys2-x86_64-20220118.exe
+	r) CLANG de la version CYGWIN, adossé aux environnements MINGW64 et MINGW32, version 8.0.0 (very old !) (version gcc 11.3.0) : downloadable http://www.cygwin.com/install.html (tool for install or update : setup-x86_64.exe)
 
     TDE -> Add resource file and resource header for restitute version + icon OpenGL.ico for fun
 			because versionning is important, same for freeware :-) !]]>

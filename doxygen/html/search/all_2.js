@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['initgl_0',['InitGL',['../_lesson05_8c.html#aa4c387d3f1ebce6d57684b6a10c9b0ae',1,'Lesson05.c']]]
+  ['drawglscene_0',['DrawGLScene',['../_lesson05_8c.html#a52061247bdaeb770e3a1d59eefaad972',1,'Lesson05.c']]]
 ];

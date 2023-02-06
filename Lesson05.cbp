@@ -30,31 +30,29 @@ COPYRIGHT AND DISCLAIMER: (c)2000 Jeff Molofee
 
  Modified smoothly by Thierry DECHAIZE
 
- Modified smoothly by Thierry DECHAIZE
-
 Paradigm : obtain one source (only one !) compatible for multiple free C Compilers
     and provide for all users an development environment on Windows 11 64 bits
     the great Code::Blocks manager (version 20.3), and don't use glaux.lib or glaux.dll.
 
-	a) Mingw 32 bits, version officielle gcc 9.2.0 (old !) : downloadable on http://sourceforge.net/projects/mingw/ (official) 
-	b) Mingw 64 bits included in new IDE Red Panda Dev-Cpp, version gcc 10.3.0 : donwloadable on http://sourceforge.net/projects/dev-cpp-2020/
-	c) Mingw 64 bits included in package Code::Blocks (version 20.03), version gcc 8.1.0 (very old !) : downloadable on http://sourceforge.net/projects/codeblocks/files/Binaries/20.03/Windows/
+	a) Mingw 32 bits, version officielle gcc 9.2.0 (very old !) : downloadable on http://sourceforge.net/projects/mingw/ (official)
+	b) Mingw 64 bits included in new IDE Red Panda Dev-Cpp, version gcc 12.2.0 : donwloadable on https://sourceforge.net/projects/redpanda-cpp/files/
+	c) Mingw 64 bits included in package Code::Blocks (version 20.03 with mingw), version gcc 11.2.0 : downloadable on http://sourceforge.net/projects/codeblocks/files/Binaries/20.03/Windows/
 	d) Mingw 32 and 64 bits packagés, version gcc 11.2.0 : downloadable on  https://winlibs.com/ (and CLANG included in, 32 and 64 bits), two kits :
-			- winlibs-i686-posix-dwarf-gcc-12.2.0-llvm-14.0.6-mingw-w64ucrt-10.0.0-r2.7z (32 bits)
-			- winlibs-x86_64-posix-seh-gcc-12.2.0-llvm-14.0.6-mingw-w64ucrt-10.0.0-r2.7z (64 bits)
+			- winlibs-i686-posix-dwarf-gcc-12.2.0-llvm-15.0.7-mingw-w64ucrt-10.0.0-r4.7z (32 bits)
+			- winlibs-x86_64-posix-seh-gcc-12.2.0-llvm-15.0.7-mingw-w64ucrt-10.0.0-r4.7z (64 bits)
 	e) Cygwin64, 32 et 64 bits, version gcc 11.3.0 : downloadable on http://www.cygwin.com/install.html (tool for install : setup-x86_64.exe)
 	f) TDM GCC, 32 et 64 bits, version 10.3.0 : downloadable on http://sourceforge.net/projects/TDM-GCC
-	g) MSYS2 environnement MINGW32 and MINGW64, 32 et 64 bits, version de 2022 (msys2-x86_64-20220603.exe), version gcc 12.2.0 : downloadable on https://repo.msys2.org/distrib/x86_64/msys2-x86_64-20220603.exe
+	g) MSYS2 environnement MINGW32 and MINGW64, 32 et 64 bits, version de 2022 (msys2-x86_64-20230127.exe), version gcc 12.2.0 : downloadable on https://repo.msys2.org/distrib/x86_64/msys2-x86_64-20230127.exe
 	h) Visual Studio 2022, 32 et 64 bits, community edition for free : downloadable on https://visualstudio.microsoft.com/fr/thank-you-downloading-visual-studio/?sku=Community&rel=17
 	i) Borland C/C++ 32 bits, version 5.5 : downloadable on https://developerinsider.co/download-and-install-borland-c-compiler-on-windows-10/
-	j) Digital Mars Compiler C/C++ 32 bits version 8.57 : downloadable on http://www.digitalmars.com (the more old compiler, the more bugged, dead branch !)
-	k) OpenWatcom C/C++ 32 et 64 bits, version 2.0 : downloadable on http://openwatcom.mirror.fr/ (only 32 bits version run correctly !)
+	j) Digital Mars Compiler C 32 bits version 8.57 : downloadable on http://www.digitalmars.com (the more old compiler, the more bugged, dead branch !)
+	k) OpenWatcom 32 et 64 bits, version 2.0 : downloadable on http://openwatcom.mirror.fr/
 	l) Lcc and Lcc64, 32 et 64 bits: downloadable http://www.cs.virginia.edu/~lcc-win32/
-	m) PELLES C (only C) , 32 et 64 bits, version 11.0 : downloadable on http://www.smorgasbordet.com/pellesc/
-	o) CLANG, adossé aux environnements MINGW64 et MINGW32, version 14.0.6 (version gcc 12.0.0) : downloadable on https://winlibs.com/ 
-	p) CLANG, adossé aux environnements Visual Studio 2022 (+ kits Microsoft), version 15.0.0 : downloadable on https://releases.llvm.org/download.html
-	q) CLANG de la version MSYS2, adossé aux environnements MINGW64 et MINGW32, version 15.0.0 (version gcc 12.2.0) : downloadable on https://repo.msys2.org/distrib/x86_64/msys2-x86_64-20220118.exe
-	r) CLANG de la version CYGWIN, adossé aux environnements MINGW64 et MINGW32, version 8.0.0 (very old !) (version gcc 11.3.0) : downloadable http://www.cygwin.com/install.html (tool for install or update : setup-x86_64.exe)	
+	m) PELLES C, 32 et 64 bits, version 11.0 : downloadable on http://www.smorgasbordet.com/pellesc/
+	o) CLANG, adossé aux environnements MINGW64 et MINGW32, version 15.0.7 (version gcc 12.0.0) : downloadable on https://winlibs.com/
+	p) CLANG, adossé aux environnements Visual Studio 2022 (+ kits Microsoft), version 15.0.7 : downloadable on https://releases.llvm.org/download.html
+	q) CLANG de la version MSYS2, adossé aux environnements MINGW64 et MINGW32, version 15.0.7 (version gcc 12.2.0) : downloadable on https://repo.msys2.org/distrib/x86_64/msys2-x86_64-20220118.exe
+	r) CLANG de la version CYGWIN, adossé aux environnements MINGW64 et MINGW32, version 8.0.0 (version gcc 11.3.0) : downloadable http://www.cygwin.com/install.html (tool for install : setup-x86_64.exe)	
 
     TDE -> Add resource file and resource header for restitute version + icon OpenGL.ico for fun
 			because versionning is important, same for freeware :-) !]]>
@@ -567,7 +565,6 @@ Paradigm : obtain one source (only one !) compatible for multiple free C Compile
 				</Compiler>
 				<Linker>
 					<Add option="/debug" />
-					<Add option="/MACHINE:X64" />
 					<Add library="glu32" />
 					<Add library="opengl32" />
 					<Add library="user32" />
@@ -589,7 +586,6 @@ Paradigm : obtain one source (only one !) compatible for multiple free C Compile
 					<Add option="-DNDEBUG" />
 				</Compiler>
 				<Linker>
-					<Add option="/MACHINE:X64" />
 					<Add library="glu32" />
 					<Add library="opengl32" />
 					<Add library="user32" />
@@ -833,7 +829,6 @@ Paradigm : obtain one source (only one !) compatible for multiple free C Compile
 				<Option compiler="openwatcom_w64_compiler" />
 				<Compiler>
 					<Add option="-d2" />
-					<Add option="-bcl=nt" />
 					<Add option="-d_DEBUG" />
 					<Add option="-dDEBUG" />
 				</Compiler>
@@ -853,7 +848,6 @@ Paradigm : obtain one source (only one !) compatible for multiple free C Compile
 				<Option type="0" />
 				<Option compiler="ow" />
 				<Compiler>
-					<Add option="-bcl=nt" />
 					<Add option="-dNDEBUG" />
 				</Compiler>
 				<Linker>
@@ -1068,7 +1062,6 @@ Paradigm : obtain one source (only one !) compatible for multiple free C Compile
 					<Add option="/FO objCLANGX32\Debug\Lesson05.res" />
 				</ResourceCompiler>
 				<Linker>
-					<Add option="-target i686-pc-windows-msvc" />
 					<Add library="glu32" />
 					<Add library="opengl32" />
 					<Add library="user32" />
@@ -1091,14 +1084,12 @@ Paradigm : obtain one source (only one !) compatible for multiple free C Compile
 				<Option compiler="llvm_clang_compiler_x32" />
 				<Option use_console_runner="0" />
 				<Compiler>
-					<Add option="-target i686-pc-windows-msvc" />
 					<Add option="-DNDEBUG" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add option="/FO objCLANGX32\Debug\Lesson05.res" />
 				</ResourceCompiler>
 				<Linker>
-					<Add option="-target i686-pc-windows-msvc" />
 					<Add library="glu32" />
 					<Add library="opengl32" />
 					<Add library="user32" />
@@ -1122,12 +1113,10 @@ Paradigm : obtain one source (only one !) compatible for multiple free C Compile
 				<Option use_console_runner="0" />
 				<Compiler>
 					<Add option="-g" />
-					<Add option="-target x86_64-pc-windows-msvc" />
 					<Add option="-D_DEBUG" />
 					<Add option="-DDEBUG" />
 				</Compiler>
 				<Linker>
-					<Add option="-target x86_64-pc-windows-msvc" />
 					<Add library="glu32" />
 					<Add library="opengl32" />
 					<Add library="user32" />
@@ -1150,14 +1139,12 @@ Paradigm : obtain one source (only one !) compatible for multiple free C Compile
 				<Option compiler="llvm_clang_compiler_x64" />
 				<Option use_console_runner="0" />
 				<Compiler>
-					<Add option="-target x86_64-pc-windows-msvc" />
 					<Add option="-DNDEBUG" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add option="/FO objCLANGX64\Release\Lesson05.res" />
 				</ResourceCompiler>
 				<Linker>
-					<Add option="-target x86_64-pc-windows-msvc" />
 					<Add library="glu32" />
 					<Add library="opengl32" />
 					<Add library="user32" />
@@ -1245,20 +1232,18 @@ Paradigm : obtain one source (only one !) compatible for multiple free C Compile
 				<Option compiler="gcc" />
 				<ExtraCommands>
 					<Add before="cmd /c del *.7z" />
-					<Add before="cmd /c del *.tgz" />
 					<Add before="cmd /c del *.tar" />
-					<Add before='&quot;C:\CodeBlocks\cbp2make.exe&quot; --local -in $(project_dir)$(project_filename) -out makefile' />
 					<Add before="%PYTHON64% ..\..\tools\Size_exec.py $(PROJECT_NAME)" />
 					<Add before="%PYTHON64% ..\..\tools\Calc_checksums.py $(PROJECT_NAME)" />
-					<Add after='C:\Program Files\7-Zip\7z a  $(PROJECT_NAME)_$(TODAY)_src.7z src\*.* res\*.* data\*.* build.cmake\* *.bat *.txt *.html *.md doxygen\*.* doc\* *.cbp *.workspace -x!*.bak -p&quot;$(PROJECT_NAME)_tde&quot;' />
+					<Add after='C:\Program Files\7-Zip\7z a $(PROJECT_NAME)_$(TODAY)_src.7z src\*.* res\*.* data\*.* build.cmake\*  build.batch\*  *.bat *.txt *.html *.md doxygen\* doc\* *.cbp *.workspace -x!*.bak README makefile -mhe -p&quot;$(PROJECT_NAME)_tde@03!&quot;' />
 					<Add after="C:\Program Files\7-Zip\7z a -ttar $(PROJECT_NAME)_$(TODAY)_all.tar * -x!*.7z -x!*.bak" />
-					<Add after="C:\Program Files\7-Zip\7z a -tgzip $(PROJECT_NAME)_$(TODAY)_all.tgz *.tar" />
+					<Add after='C:\Program Files\7-Zip\7z a $(PROJECT_NAME)_$(TODAY)_all.7z *.tar -mhe -p&quot;$(PROJECT_NAME)_tde@03!&quot;' />
 					<Add after="cmd /c del *.tar" />
 				</ExtraCommands>
 			</Target>
 		</Build>
 		<VirtualTargets>
-			<Add alias="All build" targets="Debug Mingw32 official;Release Mingw32 official;Debug Mingw64 CB;Release Mingw64 CB;Debug Mingw64 Dev-Cpp;Release Mingw64 Dev-Cpp;Debug CYGWIN 32;Release CYGWIN 32;Debug CYGWIN 64;Release CYGWIN 64;Debug Mingw32 wl;Release Mingw32 wl;Debug Mingw64 wl;Release Mingw64 wl;Debug TDM MinGW32;Release TDM MinGW32;Debug TDM MinGW64;Release TDM MinGW64;Debug MSYS2W32;Release MSYS2W32;Debug MSYS2W64;Release MSYS2W64;Debug VS2022 X32;Release VS2022 X32;Debug VS2022 X64;Release VS2022 X64;Debug DMC;Release DMC;Debug lcc;Release lcc;Debug lcc64;Release lcc64;Debug BorlandC;Release BorlandC;Debug OW 32;Release OW 32;Debug PELLES C;Release PELLES C;Debug PELLES C 64;Release PELLES C 64;Debug CLANG Mingw32;Release CLANG Mingw32;Debug CLANG Mingw64;Release CLANG Mingw64;Debug CLANG MSX32;Release CLANG MSX32;Debug CLANG MSX64;Release CLANG MSX64;Debug CLANG MSYS W32;Release CLANG MSYS W32;Debug CLANG MSYS W64;Release CLANG MSYS W64;Archive;" />
+			<Add alias="All build" targets="Debug Mingw32 official;Release Mingw32 official;Debug Mingw64 CB;Release Mingw64 CB;Debug Mingw64 Dev-Cpp;Release Mingw64 Dev-Cpp;Debug CYGWIN 32;Release CYGWIN 32;Debug CYGWIN 64;Release CYGWIN 64;Debug Mingw32 wl;Release Mingw32 wl;Debug Mingw64 wl;Release Mingw64 wl;Debug TDM MinGW32;Release TDM MinGW32;Debug TDM MinGW64;Release TDM MinGW64;Debug MSYS2W32;Release MSYS2W32;Debug MSYS2W64;Release MSYS2W64;Debug VS2022 X32;Release VS2022 X32;Debug VS2022 X64;Release VS2022 X64;Debug DMC;Release DMC;Debug lcc;Release lcc;Debug lcc64;Release lcc64;Debug BorlandC;Release BorlandC;Debug OW 32;Release OW 32;Debug OW 64;Release OW 64;Debug PELLES C;Release PELLES C;Debug PELLES C 64;Release PELLES C 64;Debug CLANG Mingw32;Release CLANG Mingw32;Debug CLANG Mingw64;Release CLANG Mingw64;Debug CLANG MSX32;Release CLANG MSX32;Debug CLANG MSX64;Release CLANG MSX64;Debug CLANG MSYS W32;Release CLANG MSYS W32;Debug CLANG MSYS W64;Release CLANG MSYS W64;Archive;" />
 		</VirtualTargets>
 		<Unit filename="src/Lesson05.c">
 			<Option compilerVar="CC" />
@@ -1298,6 +1283,8 @@ Paradigm : obtain one source (only one !) compatible for multiple free C Compile
 			<Option target="Release BorlandC" />
 			<Option target="Debug OW 32" />
 			<Option target="Release OW 32" />
+			<Option target="Debug OW 64" />
+			<Option target="Release OW 64" />
 			<Option target="Debug PELLES C" />
 			<Option target="Release PELLES C" />
 			<Option target="Debug PELLES C 64" />
@@ -1353,6 +1340,8 @@ Paradigm : obtain one source (only one !) compatible for multiple free C Compile
 			<Option target="Release BorlandC" />
 			<Option target="Debug OW 32" />
 			<Option target="Release OW 32" />
+			<Option target="Debug OW 64" />
+			<Option target="Release OW 64" />
 			<Option target="Debug PELLES C" />
 			<Option target="Release PELLES C" />
 			<Option target="Debug PELLES C 64" />
@@ -1407,6 +1396,8 @@ Paradigm : obtain one source (only one !) compatible for multiple free C Compile
 			<Option target="Release BorlandC" />
 			<Option target="Debug OW 32" />
 			<Option target="Release OW 32" />
+			<Option target="Debug OW 64" />
+			<Option target="Release OW 64" />
 			<Option target="Debug PELLES C" />
 			<Option target="Release PELLES C" />
 			<Option target="Debug PELLES C 64" />

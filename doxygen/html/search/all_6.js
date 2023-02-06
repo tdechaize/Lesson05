@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['winmain_0',['WinMain',['../_lesson05_8c.html#a661c2abc03926acfaeb93b4ae7db4943',1,'Lesson05.c']]],
-  ['wndproc_1',['WndProc',['../_lesson05_8c.html#ae749e989b362e19783c7af4a2bf46c95',1,'Lesson05.c']]]
+  ['keys_0',['keys',['../_lesson05_8c.html#a55a8351b704275ad12988864918abb2a',1,'Lesson05.c']]],
+  ['killglwindow_1',['KillGLWindow',['../_lesson05_8c.html#af33a2273205c1491be5916d3091658e0',1,'Lesson05.c']]]
 ];

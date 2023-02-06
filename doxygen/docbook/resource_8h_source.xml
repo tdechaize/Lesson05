@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_resource_8h_source" xml:lang="en-US">
+<title>resource.h</title>
+<indexterm><primary>resource.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#ifndef&#32;HEADER_98A3E811F74B501F</emphasis>
+2 <emphasis role="preprocessor">#define&#32;HEADER_98A3E811F74B501F</emphasis>
+3 
+4 <emphasis role="comment">/*</emphasis>
+5 <emphasis role="comment">*</emphasis>
+6 <emphasis role="comment">*******************************************</emphasis>
+7 <emphasis role="comment">*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+8 <emphasis role="comment">*&#32;&#32;&#32;Resource&#32;Header&#32;File&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+9 <emphasis role="comment">*&#32;&#32;&#32;Created&#32;by&#32;Thierry&#32;DECHAIZE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+10 <emphasis role="comment">*&#32;&#32;&#32;Date&#32;:&#32;2013/11/29&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+11 <emphasis role="comment">*******************************************</emphasis>
+12 <emphasis role="comment">*</emphasis>
+13 <emphasis role="comment">*/</emphasis>
+14 
+27 <emphasis role="preprocessor">#ifndef&#32;HEADER_RESOURCE__INCLUDED</emphasis>
+28 <emphasis role="preprocessor">#define&#32;HEADER_RESOURCE__INCLUDED</emphasis>
+29 
+30 <emphasis role="preprocessor">#define&#32;IDC_MYICON&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;2</emphasis>
+31 <emphasis role="preprocessor">#define&#32;IDD_TEXTDIALOGSAMPLE_DIALOG&#32;&#32;&#32;&#32;&#32;102</emphasis>
+32 <emphasis role="preprocessor">#define&#32;IDS_APP_TITLE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;103</emphasis>
+33 <emphasis role="preprocessor">#define&#32;IDD_ABOUTBOX&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;103</emphasis>
+34 <emphasis role="preprocessor">#define&#32;IDM_ABOUT&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;104</emphasis>
+35 <emphasis role="preprocessor">#define&#32;IDM_EXIT&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;105</emphasis>
+36 <emphasis role="preprocessor">#define&#32;IDI_TEXTDIALOGSAMPLE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;107</emphasis>
+37 <emphasis role="preprocessor">#define&#32;IDI_SMALL&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;108</emphasis>
+38 <emphasis role="preprocessor">#define&#32;IDC_TEXTDIALOGSAMPLE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;109</emphasis>
+39 <emphasis role="preprocessor">#define&#32;IDR_MAINFRAME&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;128</emphasis>
+40 <emphasis role="preprocessor">#define&#32;IDI_MYICON&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;201</emphasis>
+41 <emphasis role="preprocessor">#define&#32;IDC_BUTTON1&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1000</emphasis>
+42 <emphasis role="preprocessor">#define&#32;IDC_BUTTON2&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1001</emphasis>
+43 <emphasis role="preprocessor">#define&#32;IDC_SIZE_SLIDER&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1002</emphasis>
+44 <emphasis role="preprocessor">#define&#32;IDC_SIZE_LABEL&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1003</emphasis>
+45 <emphasis role="preprocessor">#define&#32;IDC_INPUT_TEXT&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1005</emphasis>
+46 <emphasis role="preprocessor">#define&#32;IDC_FONT_LIST&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1006</emphasis>
+47 <emphasis role="preprocessor">#define&#32;IDC_BOLD&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1008</emphasis>
+48 <emphasis role="preprocessor">#define&#32;IDC_ITALIC&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1009</emphasis>
+49 <emphasis role="preprocessor">#define&#32;IDC_CHECK4&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1010</emphasis>
+50 <emphasis role="preprocessor">#define&#32;IDC_UNDERLINE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1010</emphasis>
+51 <emphasis role="preprocessor">#define&#32;IDC_STATIC&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;-1</emphasis>
+52 <emphasis role="preprocessor">#define&#32;IDC_DWRITE_TEXT&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;-1</emphasis>
+53 
+54 <emphasis role="comment">//&#32;Next&#32;default&#32;values&#32;for&#32;new&#32;objects</emphasis>
+55 <emphasis role="comment">//</emphasis>
+56 <emphasis role="preprocessor">#ifdef&#32;APSTUDIO_INVOKED</emphasis>
+57 <emphasis role="preprocessor">#ifndef&#32;APSTUDIO_READONLY_SYMBOLS</emphasis>
+58 <emphasis role="preprocessor">#define&#32;_APS_NO_MFC&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1</emphasis>
+59 <emphasis role="preprocessor">#define&#32;_APS_NEXT_RESOURCE_VALUE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;129</emphasis>
+60 <emphasis role="preprocessor">#define&#32;_APS_NEXT_COMMAND_VALUE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;32771</emphasis>
+61 <emphasis role="preprocessor">#define&#32;_APS_NEXT_CONTROL_VALUE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1011</emphasis>
+62 <emphasis role="preprocessor">#define&#32;_APS_NEXT_SYMED_VALUE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;110</emphasis>
+63 <emphasis role="preprocessor">#endif</emphasis>
+64 <emphasis role="preprocessor">#endif</emphasis>
+65 
+66 <emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Define&#32;strings&#32;for&#32;VERSIONINFO</emphasis>
+67 
+68 <emphasis role="preprocessor">#define&#32;VER_FILEVERSION&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;2,0,1,0</emphasis>
+69 <emphasis role="preprocessor">#define&#32;VER_FILEVERSION_STR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;2.0.1.0\0&quot;</emphasis>
+70 
+71 <emphasis role="preprocessor">#define&#32;VER_PRODUCTVERSION&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;2,0,1,0</emphasis>
+72 <emphasis role="preprocessor">#define&#32;VER_PRODUCTVERSION_STR&#32;&#32;&#32;&#32;&#32;&#32;&quot;2.0.1.0\0&quot;</emphasis>
+73 
+74 <emphasis role="preprocessor">#if&#32;!defined(DEBUG)&#32;||&#32;!defined(_DEBUG)</emphasis>
+75 <emphasis role="preprocessor">#define&#32;VER_DEBUG&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0</emphasis>
+76 <emphasis role="preprocessor">#else</emphasis>
+77 <emphasis role="preprocessor">#define&#32;VER_DEBUG&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;VS_FF_DEBUG</emphasis>
+78 <emphasis role="preprocessor">#endif</emphasis>
+79 
+80 <emphasis role="preprocessor">#define&#32;VER_COMPANYNAME_STR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;NeHe&#32;Productions\0&quot;</emphasis>
+81 <emphasis role="preprocessor">#define&#32;VER_FILEDESCRIPTION_STR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;NeHe&#32;Lesson05&#32;OpenGL\0&quot;</emphasis>
+82 <emphasis role="preprocessor">#define&#32;VER_INTERNALNAME_STR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;Lesson05\0&quot;</emphasis>
+83 <emphasis role="preprocessor">#define&#32;VER_LEGALCOPYRIGHT_STR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;No&#32;patent.&#32;For&#32;free&#32;use.\0&quot;</emphasis>
+84 <emphasis role="preprocessor">#define&#32;VER_LEGALTRADEMARKS1_STR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;Neon&#32;Helium&#32;Productions\0&quot;</emphasis>
+85 <emphasis role="preprocessor">#define&#32;VER_LEGALTRADEMARKS2_STR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;See&#32;usage&#32;rules&#32;on&#32;www&#32;-&gt;&#32;nehe.gamedev.net\0&quot;</emphasis>
+86 <emphasis role="preprocessor">#define&#32;VER_ORIGINALFILENAME_STR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;Lesson05.exe\0&quot;</emphasis>
+87 <emphasis role="comment">//&#32;#define&#32;VER_PRODUCTNAME_STR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;Lesson05&#32;OpenGL&#32;:&#32;First&#32;animated&#32;colored&#32;pyramid&#32;and&#32;cube.\0&quot;</emphasis>
+88 <emphasis role="preprocessor">#define&#32;VER_DATE_BUILD&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;October&#32;2020\0&quot;</emphasis>
+89 <emphasis role="preprocessor">#define&#32;VER_COMMENTS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;Paradigm&#32;:&#32;one&#32;source&#32;for&#32;multiple&#32;free&#32;C&#32;compilers\0&quot;</emphasis>
+90 <emphasis role="preprocessor">#define&#32;VER_SUPPORT&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;thierry.dechaize@gmail.com\0&quot;</emphasis>
+91 <emphasis role="preprocessor">#define&#32;VER_USERS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;Anyone,&#32;unlimited.\0&quot;</emphasis>
+92 
+93 <emphasis role="preprocessor">#endif&#32;&#32;&#32;</emphasis><emphasis role="comment">//&#32;HEADER_RESOURCE__INCLUDED</emphasis>
+94 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;header&#32;guard</emphasis>
+95 
+</programlisting></section>
